@@ -4,6 +4,7 @@ import MinesweeperBoard from './components/MinesweeperBoard';
 import StatsModal from './components/StatsModal';
 import HowToPlayModal from './components/HowToPlayModal';
 import WinLoseOverlay from './components/WinLoseOverlay';
+import EasterEggModal from './components/EasterEggModal';
 import { playSound } from './utils/audio';
 import { 
   DifficultyType, 
@@ -13,6 +14,7 @@ import {
   GameStatus, 
   ClickMode 
 } from './types';
+import { Language, translations } from './utils/i18n';
 
 const STATS_KEY = 'google_minesweeper_stats';
 
@@ -23,6 +25,34 @@ const initialStatsState: GameStats = {
 };
 
 export default function App() {
+  // Multilingual localization states (Simplified Chinese default with smart browser locale fallback)
+  const [lang, setLang] = useState<Language>(() => {
+    try {
+      const stored = localStorage.getItem('google_minesweeper_lang');
+      if (stored === 'zh-CN' || stored === 'zh-TW' || stored === 'en') {
+        return stored as Language;
+      }
+    } catch (e) {}
+    
+    if (typeof navigator !== 'undefined') {
+      const navLang = navigator.language;
+      if (navLang.includes('TW') || navLang.includes('HK') || navLang.includes('CHT')) return 'zh-TW';
+      if (navLang.includes('CN') || navLang.includes('ZH') || navLang.includes('zh')) return 'zh-CN';
+    }
+    return 'en';
+  });
+
+  const [isEasterEggOpen, setIsEasterEggOpen] = useState<boolean>(false);
+
+  // Synchronize language selection automatically across matches
+  useEffect(() => {
+    try {
+      localStorage.setItem('google_minesweeper_lang', lang);
+    } catch (e) {}
+  }, [lang]);
+
+  const t = translations[lang];
+
   // Game states
   const [difficulty, setDifficulty] = useState<DifficultyType>('easy');
   const [board, setBoard] = useState<Cell[][]>([]);
@@ -451,7 +481,7 @@ export default function App() {
     <div className="min-h-screen bg-[#f8f9fa] flex items-center justify-center p-3 sm:p-6 font-sans antialiased text-slate-800">
       <div className="w-full max-w-4xl flex flex-col gap-6">
         {/* Playable Section Card */}
-        <div className="bg-white rounded-[24px] shadow-sm p-5 sm:p-8 flex flex-col gap-6 border border-slate-200/50 relative overflow-hidden google-shadow">
+        <div className="bg-white rounded-[24px] shadow-sm p-4 sm:p-8 flex flex-col gap-6 border border-slate-200/50 relative overflow-hidden google-shadow">
           {/* Main Title & stats bar */}
           <Header
             difficulty={difficulty}
@@ -470,6 +500,9 @@ export default function App() {
             onRestart={() => initializeBoard()}
             onOpenStats={() => setIsStatsOpen(true)}
             onOpenHowTo={() => setIsHowToOpen(true)}
+            lang={lang}
+            setLang={setLang}
+            onOpenEasterEgg={() => setIsEasterEggOpen(true)}
           />
 
           {/* Interactive Core Garden grid */}
@@ -492,12 +525,22 @@ export default function App() {
             config={currentConfig}
             onRestart={() => initializeBoard()}
             onOpenStats={() => setIsStatsOpen(true)}
+            lang={lang}
           />
         </div>
 
         {/* Footer credits matches branding honesty constraints: Simple literal details, no system clutter of slop */}
-        <div className="text-center text-[11px] text-slate-400 select-none">
-          Click tiles to unearth hidden numbers. Press the <kbd className="px-1.5 py-0.5 text-slate-600 bg-slate-200/50 rounded text-[10px] font-mono font-semibold">F</kbd> shortcut key to toggle flag status. Double click a number to quick-sweep surrounding spaces.
+        <div className="text-center text-[11px] text-slate-400 select-none flex flex-col gap-3">
+          <div className="leading-relaxed font-sans">
+            {t.footerShortcutInfo}
+          </div>
+          <div 
+            onClick={() => setIsEasterEggOpen(true)}
+            className="text-amber-500 hover:text-amber-600 font-display font-extrabold tracking-wider uppercase cursor-pointer flex items-center justify-center gap-1 hover:scale-[1.02] active:scale-95 transition-all duration-200 select-none"
+            id="footer-egg-trigger"
+          >
+            <span>✨ Designed & Engineered by 椒哥 (Design by 椒哥) ✨</span>
+          </div>
         </div>
       </div>
 
@@ -507,11 +550,21 @@ export default function App() {
         onClose={() => setIsStatsOpen(false)}
         stats={stats}
         onClearStats={handleClearStats}
+        lang={lang}
       />
 
       <HowToPlayModal
         isOpen={isHowToOpen}
         onClose={() => setIsHowToOpen(false)}
+        lang={lang}
+      />
+
+      {/* Jiao Ge's Legendary Easter Egg Modal */}
+      <EasterEggModal
+        isOpen={isEasterEggOpen}
+        onClose={() => setIsEasterEggOpen(false)}
+        lang={lang}
+        soundEnabled={soundEnabled}
       />
     </div>
   );

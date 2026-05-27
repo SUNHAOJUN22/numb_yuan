@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import { Flag, X } from 'lucide-react';
-import { Cell, DifficultyConfig, DIFFICULTIES } from '../types';
+import { Cell, DifficultyConfig } from '../types';
 
 interface BoardProps {
   board: Cell[][];
@@ -24,7 +24,48 @@ export default function MinesweeperBoard({
   activeCell,
   setActiveCell,
 }: BoardProps) {
-  const { rows, cols } = config;
+  const { cols } = config;
+
+  // Touch handlers for mobile device compatibility (iOS/Android/Windows Touch)
+  const touchTimeoutRef = useRef<any>(null);
+  const touchHasMovedRef = useRef<boolean>(false);
+  const lastTouchFlaggedCellRef = useRef<string | null>(null);
+
+  const startTouchTimer = (r: number, c: number) => {
+    if (status !== 'playing' && status !== 'idle') return;
+    touchHasMovedRef.current = false;
+    
+    if (touchTimeoutRef.current) {
+      clearTimeout(touchTimeoutRef.current);
+    }
+
+    touchTimeoutRef.current = setTimeout(() => {
+      if (!touchHasMovedRef.current) {
+        // Trigger small vibration for pristine feedback on mobile platforms
+        if (typeof window !== 'undefined' && window.navigator && window.navigator.vibrate) {
+          try {
+            window.navigator.vibrate(35);
+          } catch (e) {}
+        }
+        onFlag(r, c);
+        lastTouchFlaggedCellRef.current = `${r}-${c}`;
+        touchTimeoutRef.current = null;
+      }
+    }, 380); // Optimal long press duration for responsive feel without accidental trigger
+  };
+
+  const cancelTouchTimer = () => {
+    if (touchTimeoutRef.current) {
+      clearTimeout(touchTimeoutRef.current);
+      touchTimeoutRef.current = null;
+    }
+  };
+
+  const handleTouchMove = () => {
+    // If the finger slides, the user is scrolling the board. Cancel the flagging action.
+    touchHasMovedRef.current = true;
+    cancelTouchTimer();
+  };
 
   // Render correct color values for neighbor mines (Google themed)
   const getNumberColor = (num: number) => {
@@ -80,11 +121,9 @@ export default function MinesweeperBoard({
       if (cell.isMine) {
         return 'bg-[#EA4335] text-white'; // Exploded mine color
       }
-      // Revealed checkers (clean whites/grays)
       return isEven ? 'bg-[#ffffff]' : 'bg-[#f8f9fa]';
     }
 
-    // Unrevealed checkers (beautiful clean light blues)
     return isEven 
       ? 'bg-[#e8f0fe] hover:bg-[#d2e3fc] cursor-pointer' 
       : 'bg-[#dce9fc] hover:bg-[#c3dafe] cursor-pointer';
@@ -92,24 +131,23 @@ export default function MinesweeperBoard({
 
   return (
     <div 
-      className="w-full bg-slate-50 p-4 sm:p-6 rounded-3xl border border-slate-200/40 flex justify-center overflow-x-auto no-select"
+      className="w-full bg-slate-50 p-4 sm:p-6 rounded-3xl border border-slate-200/40 flex justify-center overflow-x-auto no-select touch-pan-x touch-pan-y"
       id="minesweeper-board-wrapper"
     >
       {/* Scrollable container grid with smooth shadows */}
       <div 
-        className="rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-[#dadce0] select-none"
+        className="rounded-xl overflow-hidden shadow-sm border border-slate-250 bg-[#dadce0] select-none"
         style={{
           display: 'grid',
           gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
           width: 'max-content',
-          gap: '1px', // Creates the fine clean grid separators from design HTML
+          gap: '1px',
         }}
         id="board-grid"
       >
         {board.map((rowArr, rIdx) =>
           rowArr.map((cell, cIdx) => {
             const hasNum = cell.isRevealed && !cell.isMine && cell.neighborMines > 0;
-            const isEmpty = cell.isRevealed && !cell.isMine && cell.neighborMines === 0;
             const isGameOverMine = status === 'lost' && cell.isMine;
             const isWrongFlag = status === 'lost' && cell.isFlagged && !cell.isMine;
 
@@ -119,8 +157,19 @@ export default function MinesweeperBoard({
                 id={`cell-${rIdx}-${cIdx}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.1, delay: (rIdx + cIdx) * 0.001 }}
+                transition={{ duration: 0.08, delay: (rIdx + cIdx) * 0.0005 }}
+                
+                // Unified touch start timer
+                onTouchStart={() => startTouchTimer(rIdx, cIdx)}
+                onTouchEnd={() => cancelTouchTimer()}
+                onTouchMove={handleTouchMove}
+
                 onClick={() => {
+                  // Guard against click if this was just flagged with touch-hold
+                  if (lastTouchFlaggedCellRef.current === `${rIdx}-${cIdx}`) {
+                    lastTouchFlaggedCellRef.current = null;
+                    return;
+                  }
                   if (status === 'playing' || status === 'idle') {
                     onReveal(rIdx, cIdx);
                   }
@@ -136,18 +185,18 @@ export default function MinesweeperBoard({
                   flex items-center justify-center 
                   text-sm sm:text-base font-display font-extrabold 
                   transition-all duration-100 no-select outline-none
-                  relative border-none
+                  relative border-none select-none touch-manipulation
                   ${getCellClasses(cell)}
                 `}
               >
-                {/* 1. revealed Numbers (1-8) */}
+                {/* 1. Revealed Numbers (1-8) */}
                 {hasNum && (
                   <span className={`${getNumberColor(cell.neighborMines)} font-sans select-none scale-105`}>
                     {cell.neighborMines}
                   </span>
                 )}
 
-                {/* 2. Flag state */}
+                {/* 2. Flag State */}
                 {!cell.isRevealed && cell.isFlagged && !isWrongFlag && (
                   <motion.div
                     initial={{ scale: 0.5, rotate: -25 }}
@@ -164,7 +213,7 @@ export default function MinesweeperBoard({
                     initial={{ scale: 0.4, rotate: 45 }}
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-                    className="text-slate-800 flex items-center justify-center z-10 font-display font-extrabold text-[#EA4335]"
+                    className="text-slate-800 flex items-center justify-center z-10 font-display font-extrabold text-[#EA4335] select-none"
                   >
                     袁
                   </motion.div>
@@ -172,14 +221,14 @@ export default function MinesweeperBoard({
 
                 {/* 4. Game Over: Exploded Mine (Clicked on) */}
                 {cell.isRevealed && cell.isMine && (
-                  <div className="absolute inset-0 bg-[#EA4335] flex items-center justify-center z-10 font-display font-extrabold text-white text-base">
+                  <div className="absolute inset-0 bg-[#EA4335] flex items-center justify-center z-10 font-display font-extrabold text-white text-base select-none">
                     袁
                   </div>
                 )}
 
                 {/* 5. Game Over: Wrongly Flagged Mine Correction */}
                 {isWrongFlag && (
-                  <div className="relative flex items-center justify-center z-10 animate-fade-in">
+                  <div className="relative flex items-center justify-center z-10 animate-fade-in select-none">
                     <Flag className="w-3.5 h-3.5 text-[#EA4335]/70" fill="rgba(234, 67, 53, 0.4)" />
                     <X className="absolute w-4.5 h-4.5 text-[#EA4335] stroke-[3px]" />
                   </div>
@@ -192,4 +241,3 @@ export default function MinesweeperBoard({
     </div>
   );
 }
-

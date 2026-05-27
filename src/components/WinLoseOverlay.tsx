@@ -1,15 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Trophy, RotateCcw, BarChart3, Clock, Sparkles } from 'lucide-react';
-import { DifficultyConfig, DIFFICULTIES } from '../types';
+import { Trophy, RotateCcw, BarChart3, Clock } from 'lucide-react';
+import { DifficultyConfig } from '../types';
+import { Language, TranslationSet, translations } from '../utils/i18n';
 
 interface OverlayProps {
-  status: 'won' | 'lost' | 'playing' | 'idle';
+  status: 'won' | 'lost' | 'idle' | 'playing';
   time: number;
   bestTime: number | null;
   config: DifficultyConfig;
   onRestart: () => void;
   onOpenStats: () => void;
+  lang: Language;
 }
 
 export default function WinLoseOverlay({
@@ -19,15 +21,20 @@ export default function WinLoseOverlay({
   config,
   onRestart,
   onOpenStats,
+  lang,
 }: OverlayProps) {
-  if (status !== 'won' && status !== 'lost') return null;
+  if (status !== 'won' && status !== 'lost') {
+    return null;
+  }
+
+  const t: TranslationSet = translations[lang];
 
   const isWon = status === 'won';
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ type: 'spring', damping: 25, stiffness: 180 }}
       id="game-result-container"
@@ -41,7 +48,7 @@ export default function WinLoseOverlay({
         <div className="flex items-center justify-center">
           {isWon ? (
             <motion.div
-              animate={{ rotate: [0, -10, 10, -10, 10, 0], scale: [1, 1.1, 1.1, 1] }}
+              animate={{ rotate: [0, 5, -5, 5, 0] }}
               transition={{ repeat: Infinity, repeatDelay: 3, duration: 1 }}
               className="w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center border-2 border-emerald-100 shadow-sm"
             >
@@ -49,7 +56,7 @@ export default function WinLoseOverlay({
             </motion.div>
           ) : (
             <motion.div
-              animate={{ y: [0, -4, 0] }}
+              animate={{ y: [0, -3, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
               className="w-20 h-20 rounded-full bg-red-50 text-[#EA4335] flex items-center justify-center border-2 border-red-100 shadow-sm"
             >
@@ -58,7 +65,7 @@ export default function WinLoseOverlay({
           )}
         </div>
 
-        {/* Informative Stats & Options */}
+        {/* Text descriptions */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-3">
           <div>
             <span className={`text-[10px] font-display font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
@@ -66,33 +73,30 @@ export default function WinLoseOverlay({
             }`}>
               {isWon ? 'Victory' : 'Game Over'}
             </span>
-            <h2 className="font-display font-extrabold text-xl text-slate-800 mt-2">
-              {isWon ? '华宇的学位证归我了 🎉' : '个袁世杰闹全麻 💀'}
+            <h2 className="font-display font-extrabold text-xl text-slate-800 mt-2 select-none">
+              {isWon ? t.winOverTitle : t.loseOverTitle}
             </h2>
-            <p className="text-xs text-slate-400 font-sans mt-1 leading-relaxed">
-              {isWon 
-                ? '恭喜通关！完美清空雷格，完美夺得华宇的学位证。' 
-                : '太难顶了，扫到了隐藏的“袁”雷，这下个袁世杰闹全麻了！'}
+            <p className="text-xs text-slate-400 font-sans mt-1 leading-relaxed select-none">
+              {isWon ? t.winOverDesc : t.loseOverDesc}
             </p>
           </div>
 
-          {/* Times details row */}
+          {/* Timing details */}
           <div className="flex items-center gap-4 py-1">
             <div className="flex items-center gap-2 text-slate-600 bg-slate-50 border border-slate-100 rounded-xl px-3 py-1.5 shadow-sm text-xs font-mono font-semibold">
               <Clock className="w-4 h-4 text-slate-400" />
-              <span>Time: {time}s</span>
+              <span>{t.timeElapsed}: {time}s</span>
             </div>
-
-            {isWon && (
-              <div className="flex items-center gap-2 text-amber-700 bg-amber-50 border border-amber-100 rounded-xl px-3 py-1.5 shadow-sm text-xs font-mono font-semibold">
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span>Best: {bestTime !== null ? `${bestTime}s` : `${time}s`}</span>
+            {bestTime !== null && (
+              <div className="flex items-center gap-2 text-amber-700 bg-amber-50/50 border border-amber-100 rounded-xl px-3 py-1.5 shadow-sm text-xs font-mono font-semibold">
+                <Trophy className="w-4 h-4 text-amber-500" />
+                <span>{t.statBestTime}: {bestTime}s</span>
               </div>
             )}
           </div>
 
-          {/* Action Row */}
-          <div className="flex flex-wrap items-center gap-2 mt-2 justify-center md:justify-start w-full">
+          {/* Actions */}
+          <div className="flex flex-wrap items-center gap-3 mt-1">
             <button
               onClick={onRestart}
               id="result-play-again-btn"
@@ -103,7 +107,7 @@ export default function WinLoseOverlay({
               }`}
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              {isWon ? 'Sweep New Grid' : 'Play Again'}
+              {t.playAgainBtn}
             </button>
 
             <button
@@ -112,7 +116,7 @@ export default function WinLoseOverlay({
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-display font-bold transition-all cursor-pointer border border-slate-200"
             >
               <BarChart3 className="w-3.5 h-3.5" />
-              View Stats
+              {t.viewStatsBtn}
             </button>
           </div>
         </div>
@@ -120,4 +124,3 @@ export default function WinLoseOverlay({
     </motion.div>
   );
 }
-

@@ -29,3 +29,16 @@
   box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
 
+/* Touch manipulation utility to force iOS & Android to drop double-tap delays completely */
+.touch-manipulation {
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base body optimization for touch pans */
+body {
+  touch-action: pan-x pan-y;
+  background-color: #f8f9fa;
+  overscroll-behavior-y: contain; /* Prevents pull-to-refresh on mobile chrome/safari */
+}
+

@@ -190,5 +190,33 @@ export const playSound = {
       osc.start(ctx.currentTime + index * 0.1);
       osc.stop(ctx.currentTime + index * 0.1 + duration + 0.08);
     });
+  },
+
+  easterEgg: (enabled: boolean) => {
+    if (!enabled) return;
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    // A beautiful soaring arpeggio representing Jiao Ge's ultimate wisdom (C5 -> D5 -> E5 -> G5 -> A5 -> C6)
+    const notes = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
+    const duration = 0.15;
+
+    notes.forEach((freq, index) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + index * 0.07);
+
+      gain.gain.setValueAtTime(0.0, ctx.currentTime + index * 0.07);
+      gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + index * 0.07 + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.005, ctx.currentTime + index * 0.07 + duration + 0.1);
+
+      osc.start(ctx.currentTime + index * 0.07);
+      osc.stop(ctx.currentTime + index * 0.07 + duration + 0.15);
+    });
   }
 };
