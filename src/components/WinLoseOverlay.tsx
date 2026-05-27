@@ -67,12 +67,12 @@ export default function WinLoseOverlay({
               {isWon ? 'Victory' : 'Game Over'}
             </span>
             <h2 className="font-display font-extrabold text-xl text-slate-800 mt-2">
-              {isWon ? 'Perfect Grid Cleared!' : 'Mine Triggered!'}
+              {isWon ? '华宇的学位证归我了 🎉' : '个袁世杰闹全麻 💀'}
             </h2>
             <p className="text-xs text-slate-400 font-sans mt-1 leading-relaxed">
               {isWon 
-                ? 'Excellent work! You successfully flagged and swept all cells safely.' 
-                : 'Ah, you hit a hidden mine. Practice makes perfect sweepers!'}
+                ? '恭喜通关！完美清空雷格，完美夺得华宇的学位证。' 
+                : '太难顶了，扫到了隐藏的“袁”雷，这下个袁世杰闹全麻了！'}
             </p>
           </div>
 

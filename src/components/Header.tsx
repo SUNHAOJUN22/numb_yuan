@@ -59,10 +59,10 @@ export default function Header({
   };
 
   const getStatusText = () => {
-    if (status === 'won') return 'Congratulations! You won! 🎉';
-    if (status === 'lost') return 'Oops! Hit a mine. Try again! 🪴';
-    if (status === 'playing') return 'Careful... search carefully';
-    return 'Select a tile to start sweeping!';
+    if (status === 'won') return '华宇的学位证归我了 🎉';
+    if (status === 'lost') return '个袁世杰闹全麻 💀';
+    if (status === 'playing') return '小心行事... 仔细排查';
+    return '选择一块方格开始扫雷！';
   };
 
   const currentConfig = DIFFICULTIES[difficulty];
