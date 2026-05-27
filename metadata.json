@@ -1,0 +1,6 @@
+{
+  "name": "袁世杰闹麻了",
+  "description": "A customized Chinese-themed minimalist Minesweeper game named '袁世杰闹麻了' featuring interactive sound effects and unique icons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
