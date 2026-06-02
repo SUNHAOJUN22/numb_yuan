@@ -9,9 +9,11 @@ export interface TranslationSet {
   placeFlags: string;
   reset: string;
   difficulty: string;
+  veryEasy: string;
   easy: string;
   medium: string;
   hard: string;
+  veryHard: string;
   winStatus: string;
   loseStatus: string;
   idleStatus: string;
@@ -58,9 +60,11 @@ export const translations: Record<Language, TranslationSet> = {
     placeFlags: '插红旗子 (红旗)',
     reset: '重置',
     difficulty: '游戏难度',
+    veryEasy: '超易',
     easy: '简单',
     medium: '中等',
     hard: '困难',
+    veryHard: '超难',
     winStatus: '华宇的学位证归我了 🎉',
     loseStatus: '个袁世杰闹全麻 💀',
     idleStatus: '选择一个格子开始扫雷！',
@@ -105,9 +109,11 @@ export const translations: Record<Language, TranslationSet> = {
     placeFlags: '插紅旗子 (紅旗)',
     reset: '重置',
     difficulty: '遊戲難度',
+    veryEasy: '超易',
     easy: '簡單',
     medium: '中等',
     hard: '困難',
+    veryHard: '超難',
     winStatus: '華宇的學位證歸我了 🎉',
     loseStatus: '個袁世杰鬧全麻 💀',
     idleStatus: '選擇一個格子開始掃雷！',
@@ -152,9 +158,11 @@ export const translations: Record<Language, TranslationSet> = {
     placeFlags: 'Place Flags',
     reset: 'Reset',
     difficulty: 'Difficulty',
+    veryEasy: 'Very Easy',
     easy: 'Easy',
     medium: 'Medium',
     hard: 'Hard',
+    veryHard: 'Very Hard',
     winStatus: "Huayu's Degree is Mine! 🎉",
     loseStatus: 'Yuan Shijie Nao Quan Ma! 💀',
     idleStatus: 'Select any cell to start sweeping!',

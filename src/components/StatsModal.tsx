@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trophy, X, Trash2, Award } from 'lucide-react';
-import { GameStats } from '../types';
+import { GameStats, DifficultyType } from '../types';
 import { Language, TranslationSet, translations } from '../utils/i18n';
 
 interface StatsProps {
@@ -16,16 +16,20 @@ export default function StatsModal({ isOpen, onClose, stats, onClearStats, lang 
 
   const t: TranslationSet = translations[lang];
 
-  const getDifficultyLabel = (diff: 'easy' | 'medium' | 'hard') => {
+  const getDifficultyLabel = (diff: DifficultyType) => {
+    if (diff === 'kids') return t.veryEasy;
     if (diff === 'easy') return t.easy;
     if (diff === 'medium') return t.medium;
-    return t.hard;
+    if (diff === 'hard') return t.hard;
+    return t.veryHard;
   };
 
-  const difficultyColors = {
-    easy: 'bg-[#4285F4]',
-    medium: 'bg-[#FBBC05]',
-    hard: 'bg-[#EA4335]',
+  const difficultyColors: Record<DifficultyType, string> = {
+    kids: 'bg-[#34A853]', // Google Green
+    easy: 'bg-[#4285F4]', // Google Blue
+    medium: 'bg-[#FBBC05]', // Google Yellow
+    hard: 'bg-[#EA4335]', // Google Red
+    expert: 'bg-[#854dff]', // Purple
   };
 
   return (
@@ -59,16 +63,16 @@ export default function StatsModal({ isOpen, onClose, stats, onClearStats, lang 
 
         {/* Modal Content */}
         <div className="p-6 overflow-y-auto flex-1 flex flex-col gap-6">
-          <div className="grid grid-cols-3 gap-3">
-            {(['easy', 'medium', 'hard'] as const).map((diff) => {
-              const diffStats = stats[diff];
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5">
+            {(['kids', 'easy', 'medium', 'hard', 'expert'] as const).map((diff) => {
+              const diffStats = stats[diff] || { gamesPlayed: 0, gamesWon: 0, bestTime: null };
               const gamesPlayed = diffStats.gamesPlayed;
               const gamesWon = diffStats.gamesWon;
               const winRate = gamesPlayed > 0 ? Math.round((gamesWon / gamesPlayed) * 100) : 0;
               const bestTime = diffStats.bestTime;
 
               return (
-                <div key={diff} className="flex flex-col border border-slate-100 bg-slate-50/30 p-3 rounded-2xl relative overflow-hidden group">
+                <div key={diff} className="flex flex-col border border-slate-100 bg-slate-50/30 p-2.5 rounded-2xl relative overflow-hidden group">
                   {/* Decorative Border indicator */}
                   <div className={`absolute top-0 left-0 right-0 h-1.5 ${difficultyColors[diff]}`} />
                   
@@ -76,21 +80,21 @@ export default function StatsModal({ isOpen, onClose, stats, onClearStats, lang 
                     {getDifficultyLabel(diff)}
                   </div>
                   
-                  <div className="mt-3 flex flex-col gap-0.5">
+                  <div className="mt-2.5 flex flex-col gap-0.5">
                     <span className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">{t.statGames}</span>
                     <span className="font-mono text-xs font-bold text-slate-700">
                       {gamesWon}/{gamesPlayed}
                     </span>
                   </div>
 
-                  <div className="mt-2 flex flex-col gap-0.5">
+                  <div className="mt-1.5 flex flex-col gap-0.5">
                     <span className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">{t.statWinRate}</span>
                     <span className="font-mono text-xs font-bold text-slate-700">
                       {winRate}%
                     </span>
                   </div>
 
-                  <div className="mt-2 flex flex-col gap-0.5">
+                  <div className="mt-1.5 flex flex-col gap-0.5">
                     <span className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">{t.statBestTime}</span>
                     <span className="font-mono text-xs font-bold text-slate-700">
                       {bestTime !== null ? `${bestTime}s` : '—'}

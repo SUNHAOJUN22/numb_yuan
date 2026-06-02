@@ -19,9 +19,11 @@ import { Language, translations } from './utils/i18n';
 const STATS_KEY = 'google_minesweeper_stats';
 
 const initialStatsState: GameStats = {
+  kids: { gamesPlayed: 0, gamesWon: 0, bestTime: null },
   easy: { gamesPlayed: 0, gamesWon: 0, bestTime: null },
   medium: { gamesPlayed: 0, gamesWon: 0, bestTime: null },
   hard: { gamesPlayed: 0, gamesWon: 0, bestTime: null },
+  expert: { gamesPlayed: 0, gamesWon: 0, bestTime: null },
 };
 
 export default function App() {
@@ -74,12 +76,16 @@ export default function App() {
   const statusRef = useRef<GameStatus>(status);
   statusRef.current = status;
 
-  // Load stats on mounting
+  // Load stats on mounting with backward compatibility backup
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STATS_KEY);
       if (stored) {
-        setStats(JSON.parse(stored));
+        const parsed = JSON.parse(stored);
+        setStats({
+          ...initialStatsState,
+          ...parsed,
+        });
       }
     } catch (e) {
       console.error('Failed to parse previous user stats:', e);

@@ -5,7 +5,6 @@ import {
   BarChart3, 
   HelpCircle, 
   Spade,
-  Flag,
   Award,
   Sparkles
 } from 'lucide-react';
@@ -74,9 +73,11 @@ export default function Header({
   };
 
   const getDifficultyLabel = (diff: DifficultyType) => {
+    if (diff === 'kids') return t.veryEasy;
     if (diff === 'easy') return t.easy;
     if (diff === 'medium') return t.medium;
-    return t.hard;
+    if (diff === 'hard') return t.hard;
+    return t.veryHard;
   };
 
   return (
@@ -280,7 +281,7 @@ export default function Header({
                 : 'text-slate-500 hover:bg-[#e8eaed]/50'
             }`}
           >
-            <Flag className={`w-3.5 h-3.5 ${clickMode === 'flag' ? 'text-[#EA4335]' : 'text-slate-400'}`} fill={clickMode === 'flag' ? '#EA4335' : 'transparent'} />
+            <span className={`text-[13px] leading-none select-none transition-transform ${clickMode === 'flag' ? 'text-[#EA4335] font-black scale-110' : 'text-slate-400 font-bold'}`}>椒</span>
             {t.placeFlags}
           </button>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Spade, Flag, Sparkles, MousePointerClick, HelpCircle } from 'lucide-react';
+import { X, Spade, Sparkles, MousePointerClick, HelpCircle } from 'lucide-react';
 import { Language, TranslationSet, translations } from '../utils/i18n';
 
 interface HowProps {
@@ -70,8 +70,8 @@ export default function HowToPlayModal({ isOpen, onClose, lang }: HowProps) {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="bg-red-50 p-2 rounded-xl text-[#EA4335] shrink-0">
-                <Flag className="w-4.5 h-4.5" fill="#EA4335" />
+              <div className="bg-red-50 w-8.5 h-8.5 rounded-xl text-[#EA4335] shrink-0 flex items-center justify-center font-display font-black text-sm select-none">
+                椒
               </div>
               <div>
                 <h4 className="font-display font-bold text-xs sm:text-sm text-slate-800 select-none">{t.flagTitle}</h4>

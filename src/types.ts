@@ -1,4 +1,4 @@
-export type DifficultyType = 'easy' | 'medium' | 'hard';
+export type DifficultyType = 'kids' | 'easy' | 'medium' | 'hard' | 'expert';
 
 export interface DifficultyConfig {
   type: DifficultyType;
@@ -11,6 +11,15 @@ export interface DifficultyConfig {
 }
 
 export const DIFFICULTIES: Record<DifficultyType, DifficultyConfig> = {
+  kids: {
+    type: 'kids',
+    label: 'Very Easy',
+    rows: 6,
+    cols: 6,
+    mines: 3,
+    color: '#34A853', // Google Green
+    bgClass: 'bg-[#34A853]',
+  },
   easy: {
     type: 'easy',
     label: 'Easy',
@@ -38,6 +47,15 @@ export const DIFFICULTIES: Record<DifficultyType, DifficultyConfig> = {
     color: '#EA4335', // Google Red
     bgClass: 'bg-[#EA4335]',
   },
+  expert: {
+    type: 'expert',
+    label: 'Very Hard',
+    rows: 24,
+    cols: 30,
+    mines: 170,
+    color: '#854dff', // Purple
+    bgClass: 'bg-[#854dff]',
+  },
 };
 
 export interface Cell {
@@ -50,9 +68,11 @@ export interface Cell {
 }
 
 export interface GameStats {
+  kids: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
   easy: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
   medium: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
   hard: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
+  expert: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
 }
 
 export type GameStatus = 'idle' | 'playing' | 'won' | 'lost';

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'motion/react';
-import { Flag, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Cell, DifficultyConfig } from '../types';
 
 interface BoardProps {
@@ -201,9 +201,9 @@ export default function MinesweeperBoard({
                   <motion.div
                     initial={{ scale: 0.5, rotate: -25 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    className="animate-flag-bounce flex items-center justify-center text-[#EA4335] drop-shadow-sm z-10"
+                    className="animate-flag-bounce flex items-center justify-center text-[#EA4335] drop-shadow-sm z-10 font-display font-black text-base sm:text-lg select-none"
                   >
-                    <Flag className="w-4 h-4 sm:w-4.5 sm:h-4.5" fill="#EA4335" strokeWidth={2.5} />
+                    椒
                   </motion.div>
                 )}
 
@@ -229,7 +229,7 @@ export default function MinesweeperBoard({
                 {/* 5. Game Over: Wrongly Flagged Mine Correction */}
                 {isWrongFlag && (
                   <div className="relative flex items-center justify-center z-10 animate-fade-in select-none">
-                    <Flag className="w-3.5 h-3.5 text-[#EA4335]/70" fill="rgba(234, 67, 53, 0.4)" />
+                    <span className="text-[#EA4335]/50 font-display font-extrabold text-sm sm:text-base select-none">椒</span>
                     <X className="absolute w-4.5 h-4.5 text-[#EA4335] stroke-[3px]" />
                   </div>
                 )}
