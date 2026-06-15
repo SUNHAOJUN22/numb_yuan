@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Represents a record of a successful Minesweeper game clearance.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The Firebase Authentication UID of the player."
+        },
+        "username": {
+          "type": "string",
+          "description": "The display name of the player."
+        },
+        "avatar": {
+          "type": "string",
+          "description": "The selected avatar for the player."
+        },
+        "time": {
+          "type": "integer",
+          "description": "Clearance time in seconds."
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "The difficulty setting of the board."
+        },
+        "mines": {
+          "type": "integer",
+          "description": "Number of mines present on the board."
+        },
+        "streak": {
+          "type": "integer",
+          "description": "Jiao win streak achieved during the play."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp of when the score was recorded."
+        }
+      },
+      "required": ["userId", "username", "avatar", "time", "difficulty", "mines", "streak", "createdAt"]
+    }
+  },
+  "firestore": {
+    "leaderboard/{scoreId}": {
+      "schema": "LeaderboardEntry",
+      "description": "Global user high scores for fast board clears."
+    }
+  }
+}

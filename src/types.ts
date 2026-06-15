@@ -75,5 +75,5 @@ export interface GameStats {
   expert: { gamesPlayed: number; gamesWon: number; bestTime: number | null };
 }
 
-export type GameStatus = 'idle' | 'playing' | 'won' | 'lost';
+export type GameStatus = 'idle' | 'playing' | 'won' | 'lost' | 'paused';
 export type ClickMode = 'shovel' | 'flag';

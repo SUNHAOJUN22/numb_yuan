@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net: Default Deny All
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper Primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Leaderboard validation blueprint (prevents update gaps, shadow fields, and injection)
+    function isValidLeaderboardEntry(data) {
+      return data.keys().hasAll(['userId', 'username', 'time', 'difficulty', 'mines', 'streak', 'createdAt', 'avatar'])
+        && data.keys().size() == 8
+        && data.userId == request.auth.uid
+        && data.username is string
+        && data.username.size() >= 1
+        && data.username.size() <= 32
+        && data.avatar is string
+        && data.avatar.size() >= 1
+        && data.avatar.size() <= 500
+        && data.time is int
+        && data.time >= 1
+        && data.time <= 86400
+        && data.difficulty is string
+        && data.difficulty.size() >= 2
+        && data.difficulty.size() <= 16
+        && data.mines is int
+        && data.mines >= 1
+        && data.mines <= 500
+        && data.streak is int
+        && data.streak >= 0
+        && data.streak <= 100
+        && data.createdAt == request.time;
+    }
+
+    // Leaderboard Collection Matcher
+    match /leaderboard/{scoreId} {
+      // Allow reading individual entries or listing entries on the leaderboard publicly (guests allowed)
+      allow get, list: if true;
+      
+      // Allow creation of entries with robust validation check
+      allow create: if isSignedIn() 
+        && isValidId(scoreId) 
+        && isValidLeaderboardEntry(incoming());
+      
+      // Leaderboard entries are immutable - no updates or deletions are permitted to prevent tampering
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,1827 @@
+[
+  {
+    "id": 1,
+    "textZh": "极智心法第1天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 1: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 2,
+    "textZh": "极智心法第2天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 2: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 3,
+    "textZh": "极智心法第3天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 3: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 4,
+    "textZh": "极智心法第4天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 4: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 5,
+    "textZh": "极智心法第5天：朝阳的电动手推车又充好电了，微操坐标：[5, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 5: The Chaoyang cargo pushcart is fully charged at coordinates: [5, 5]. Strike fast!"
+  },
+  {
+    "id": 6,
+    "textZh": "极智心法第6天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 6: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 7,
+    "textZh": "极智心法第7天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 7: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 8,
+    "textZh": "极智心法第8天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 4 列微微颤动！",
+    "textEn": "Jiao Mantra Day 8: High-intensity seismic indicators registered at cell [6, 4]. Use your ultimate shield!"
+  },
+  {
+    "id": 9,
+    "textZh": "极智心法第9天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 9: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 10,
+    "textZh": "极智心法第10天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 10: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 11,
+    "textZh": "极智心法第11天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 11: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 12,
+    "textZh": "极智心法第12天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 12: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 13,
+    "textZh": "极智心法第13天：朝阳的电动手推车又充好电了，微操坐标：[1, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 13: The Chaoyang cargo pushcart is fully charged at coordinates: [1, 9]. Strike fast!"
+  },
+  {
+    "id": 14,
+    "textZh": "极智心法第14天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 14: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 15,
+    "textZh": "极智心法第15天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 15: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 16,
+    "textZh": "极智心法第16天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 8 列微微颤动！",
+    "textEn": "Jiao Mantra Day 16: High-intensity seismic indicators registered at cell [3, 8]. Use your ultimate shield!"
+  },
+  {
+    "id": 17,
+    "textZh": "极智心法第17天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 17: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 18,
+    "textZh": "极智心法第18天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 18: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 19,
+    "textZh": "极智心法第19天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 19: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 20,
+    "textZh": "极智心法第20天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 20: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 21,
+    "textZh": "极智心法第21天：朝阳的电动手推车又充好电了，微操坐标：[12, 13]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 21: The Chaoyang cargo pushcart is fully charged at coordinates: [12, 13]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 22,
+    "textZh": "极智心法第22天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 22: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 23,
+    "textZh": "极智心法第23天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 23: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 24,
+    "textZh": "极智心法第24天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 3 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 24: High-intensity seismic indicators registered at cell [0, 3]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 25,
+    "textZh": "极智心法第25天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 25: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 26,
+    "textZh": "极智心法第26天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 26: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 27,
+    "textZh": "极智心法第27天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 27: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 28,
+    "textZh": "极智心法第28天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 28: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 29,
+    "textZh": "极智心法第29天：朝阳的电动手推车又充好电了，微操坐标：[8, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 29: The Chaoyang cargo pushcart is fully charged at coordinates: [8, 17]. Strike fast!"
+  },
+  {
+    "id": 30,
+    "textZh": "极智心法第30天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 30: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 31,
+    "textZh": "极智心法第31天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 31: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 32,
+    "textZh": "极智心法第32天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 7 列微微颤动！",
+    "textEn": "Jiao Mantra Day 32: High-intensity seismic indicators registered at cell [6, 7]. Use your ultimate shield!"
+  },
+  {
+    "id": 33,
+    "textZh": "极智心法第33天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 33: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 34,
+    "textZh": "极智心法第34天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 34: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 35,
+    "textZh": "极智心法第35天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 35: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 36,
+    "textZh": "极智心法第36天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 36: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 37,
+    "textZh": "极智心法第37天：朝阳的电动手推车又充好电了，微操坐标：[4, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 37: The Chaoyang cargo pushcart is fully charged at coordinates: [4, 1]. Strike fast!"
+  },
+  {
+    "id": 38,
+    "textZh": "极智心法第38天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 38: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 39,
+    "textZh": "极智心法第39天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 39: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 40,
+    "textZh": "极智心法第40天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 2 列微微颤动！",
+    "textEn": "Jiao Mantra Day 40: High-intensity seismic indicators registered at cell [3, 2]. Use your ultimate shield!"
+  },
+  {
+    "id": 41,
+    "textZh": "极智心法第41天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 41: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 42,
+    "textZh": "极智心法第42天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 42: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 43,
+    "textZh": "极智心法第43天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 43: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 44,
+    "textZh": "极智心法第44天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 44: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 45,
+    "textZh": "极智心法第45天：朝阳的电动手推车又充好电了，微操坐标：[0, 5]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 45: The Chaoyang cargo pushcart is fully charged at coordinates: [0, 5]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 46,
+    "textZh": "极智心法第46天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 46: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 47,
+    "textZh": "极智心法第47天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 47: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 48,
+    "textZh": "极智心法第48天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 6 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 48: High-intensity seismic indicators registered at cell [0, 6]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 49,
+    "textZh": "极智心法第49天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 49: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 50,
+    "textZh": "极智心法第50天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 50: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 51,
+    "textZh": "极智心法第51天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 51: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 52,
+    "textZh": "极智心法第52天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 52: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 53,
+    "textZh": "极智心法第53天：朝阳的电动手推车又充好电了，微操坐标：[11, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 53: The Chaoyang cargo pushcart is fully charged at coordinates: [11, 9]. Strike fast!"
+  },
+  {
+    "id": 54,
+    "textZh": "极智心法第54天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 54: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 55,
+    "textZh": "极智心法第55天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 55: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 56,
+    "textZh": "极智心法第56天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 1 列微微颤动！",
+    "textEn": "Jiao Mantra Day 56: High-intensity seismic indicators registered at cell [6, 1]. Use your ultimate shield!"
+  },
+  {
+    "id": 57,
+    "textZh": "极智心法第57天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 57: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 58,
+    "textZh": "极智心法第58天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 58: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 59,
+    "textZh": "极智心法第59天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 59: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 60,
+    "textZh": "极智心法第60天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 60: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 61,
+    "textZh": "极智心法第61天：朝阳的电动手推车又充好电了，微操坐标：[7, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 61: The Chaoyang cargo pushcart is fully charged at coordinates: [7, 13]. Strike fast!"
+  },
+  {
+    "id": 62,
+    "textZh": "极智心法第62天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 62: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 63,
+    "textZh": "极智心法第63天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 63: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 64,
+    "textZh": "极智心法第64天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 5 列微微颤动！",
+    "textEn": "Jiao Mantra Day 64: High-intensity seismic indicators registered at cell [3, 5]. Use your ultimate shield!"
+  },
+  {
+    "id": 65,
+    "textZh": "极智心法第65天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 65: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 66,
+    "textZh": "极智心法第66天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 66: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 67,
+    "textZh": "极智心法第67天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 67: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 68,
+    "textZh": "极智心法第68天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 68: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 69,
+    "textZh": "极智心法第69天：朝阳的电动手推车又充好电了，微操坐标：[3, 17]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 69: The Chaoyang cargo pushcart is fully charged at coordinates: [3, 17]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 70,
+    "textZh": "极智心法第70天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 70: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 71,
+    "textZh": "极智心法第71天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 71: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 72,
+    "textZh": "极智心法第72天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 0 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 72: High-intensity seismic indicators registered at cell [0, 0]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 73,
+    "textZh": "极智心法第73天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 73: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 74,
+    "textZh": "极智心法第74天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 74: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 75,
+    "textZh": "极智心法第75天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 75: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 76,
+    "textZh": "极智心法第76天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 76: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 77,
+    "textZh": "极智心法第77天：朝阳的电动手推车又充好电了，微操坐标：[14, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 77: The Chaoyang cargo pushcart is fully charged at coordinates: [14, 1]. Strike fast!"
+  },
+  {
+    "id": 78,
+    "textZh": "极智心法第78天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 78: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 79,
+    "textZh": "极智心法第79天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 79: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 80,
+    "textZh": "极智心法第80天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 4 列微微颤动！",
+    "textEn": "Jiao Mantra Day 80: High-intensity seismic indicators registered at cell [6, 4]. Use your ultimate shield!"
+  },
+  {
+    "id": 81,
+    "textZh": "极智心法第81天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 81: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 82,
+    "textZh": "极智心法第82天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 82: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 83,
+    "textZh": "极智心法第83天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 83: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 84,
+    "textZh": "极智心法第84天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 84: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 85,
+    "textZh": "极智心法第85天：朝阳的电动手推车又充好电了，微操坐标：[10, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 85: The Chaoyang cargo pushcart is fully charged at coordinates: [10, 5]. Strike fast!"
+  },
+  {
+    "id": 86,
+    "textZh": "极智心法第86天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 86: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 87,
+    "textZh": "极智心法第87天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 87: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 88,
+    "textZh": "极智心法第88天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 8 列微微颤动！",
+    "textEn": "Jiao Mantra Day 88: High-intensity seismic indicators registered at cell [3, 8]. Use your ultimate shield!"
+  },
+  {
+    "id": 89,
+    "textZh": "极智心法第89天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 89: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 90,
+    "textZh": "极智心法第90天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 90: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 91,
+    "textZh": "极智心法第91天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 91: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 92,
+    "textZh": "极智心法第92天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 92: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 93,
+    "textZh": "极智心法第93天：朝阳的电动手推车又充好电了，微操坐标：[6, 9]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 93: The Chaoyang cargo pushcart is fully charged at coordinates: [6, 9]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 94,
+    "textZh": "极智心法第94天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 94: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 95,
+    "textZh": "极智心法第95天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 95: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 96,
+    "textZh": "极智心法第96天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 3 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 96: High-intensity seismic indicators registered at cell [0, 3]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 97,
+    "textZh": "极智心法第97天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 97: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 98,
+    "textZh": "极智心法第98天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 98: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 99,
+    "textZh": "极智心法第99天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 99: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 100,
+    "textZh": "极智心法第100天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 100: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 101,
+    "textZh": "极智心法第101天：朝阳的电动手推车又充好电了，微操坐标：[2, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 101: The Chaoyang cargo pushcart is fully charged at coordinates: [2, 13]. Strike fast!"
+  },
+  {
+    "id": 102,
+    "textZh": "极智心法第102天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 102: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 103,
+    "textZh": "极智心法第103天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 103: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 104,
+    "textZh": "极智心法第104天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 7 列微微颤动！",
+    "textEn": "Jiao Mantra Day 104: High-intensity seismic indicators registered at cell [6, 7]. Use your ultimate shield!"
+  },
+  {
+    "id": 105,
+    "textZh": "极智心法第105天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 105: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 106,
+    "textZh": "极智心法第106天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 106: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 107,
+    "textZh": "极智心法第107天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 107: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 108,
+    "textZh": "极智心法第108天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 108: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 109,
+    "textZh": "极智心法第109天：朝阳的电动手推车又充好电了，微操坐标：[13, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 109: The Chaoyang cargo pushcart is fully charged at coordinates: [13, 17]. Strike fast!"
+  },
+  {
+    "id": 110,
+    "textZh": "极智心法第110天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 110: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 111,
+    "textZh": "极智心法第111天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 111: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 112,
+    "textZh": "极智心法第112天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 2 列微微颤动！",
+    "textEn": "Jiao Mantra Day 112: High-intensity seismic indicators registered at cell [3, 2]. Use your ultimate shield!"
+  },
+  {
+    "id": 113,
+    "textZh": "极智心法第113天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 113: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 114,
+    "textZh": "极智心法第114天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 114: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 115,
+    "textZh": "极智心法第115天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 115: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 116,
+    "textZh": "极智心法第116天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 116: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 117,
+    "textZh": "极智心法第117天：朝阳的电动手推车又充好电了，微操坐标：[9, 1]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 117: The Chaoyang cargo pushcart is fully charged at coordinates: [9, 1]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 118,
+    "textZh": "极智心法第118天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 118: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 119,
+    "textZh": "极智心法第119天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 119: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 120,
+    "textZh": "极智心法第120天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 6 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 120: High-intensity seismic indicators registered at cell [0, 6]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 121,
+    "textZh": "极智心法第121天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 121: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 122,
+    "textZh": "极智心法第122天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 122: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 123,
+    "textZh": "极智心法第123天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 123: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 124,
+    "textZh": "极智心法第124天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 124: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 125,
+    "textZh": "极智心法第125天：朝阳的电动手推车又充好电了，微操坐标：[5, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 125: The Chaoyang cargo pushcart is fully charged at coordinates: [5, 5]. Strike fast!"
+  },
+  {
+    "id": 126,
+    "textZh": "极智心法第126天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 126: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 127,
+    "textZh": "极智心法第127天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 127: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 128,
+    "textZh": "极智心法第128天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 1 列微微颤动！",
+    "textEn": "Jiao Mantra Day 128: High-intensity seismic indicators registered at cell [6, 1]. Use your ultimate shield!"
+  },
+  {
+    "id": 129,
+    "textZh": "极智心法第129天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 129: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 130,
+    "textZh": "极智心法第130天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 130: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 131,
+    "textZh": "极智心法第131天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 131: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 132,
+    "textZh": "极智心法第132天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 132: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 133,
+    "textZh": "极智心法第133天：朝阳的电动手推车又充好电了，微操坐标：[1, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 133: The Chaoyang cargo pushcart is fully charged at coordinates: [1, 9]. Strike fast!"
+  },
+  {
+    "id": 134,
+    "textZh": "极智心法第134天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 134: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 135,
+    "textZh": "极智心法第135天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 135: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 136,
+    "textZh": "极智心法第136天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 5 列微微颤动！",
+    "textEn": "Jiao Mantra Day 136: High-intensity seismic indicators registered at cell [3, 5]. Use your ultimate shield!"
+  },
+  {
+    "id": 137,
+    "textZh": "极智心法第137天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 137: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 138,
+    "textZh": "极智心法第138天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 138: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 139,
+    "textZh": "极智心法第139天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 139: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 140,
+    "textZh": "极智心法第140天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 140: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 141,
+    "textZh": "极智心法第141天：朝阳的电动手推车又充好电了，微操坐标：[12, 13]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 141: The Chaoyang cargo pushcart is fully charged at coordinates: [12, 13]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 142,
+    "textZh": "极智心法第142天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 142: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 143,
+    "textZh": "极智心法第143天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 143: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 144,
+    "textZh": "极智心法第144天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 0 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 144: High-intensity seismic indicators registered at cell [0, 0]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 145,
+    "textZh": "极智心法第145天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 145: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 146,
+    "textZh": "极智心法第146天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 146: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 147,
+    "textZh": "极智心法第147天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 147: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 148,
+    "textZh": "极智心法第148天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 148: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 149,
+    "textZh": "极智心法第149天：朝阳的电动手推车又充好电了，微操坐标：[8, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 149: The Chaoyang cargo pushcart is fully charged at coordinates: [8, 17]. Strike fast!"
+  },
+  {
+    "id": 150,
+    "textZh": "极智心法第150天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 150: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 151,
+    "textZh": "极智心法第151天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 151: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 152,
+    "textZh": "极智心法第152天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 4 列微微颤动！",
+    "textEn": "Jiao Mantra Day 152: High-intensity seismic indicators registered at cell [6, 4]. Use your ultimate shield!"
+  },
+  {
+    "id": 153,
+    "textZh": "极智心法第153天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 153: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 154,
+    "textZh": "极智心法第154天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 154: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 155,
+    "textZh": "极智心法第155天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 155: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 156,
+    "textZh": "极智心法第156天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 156: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 157,
+    "textZh": "极智心法第157天：朝阳的电动手推车又充好电了，微操坐标：[4, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 157: The Chaoyang cargo pushcart is fully charged at coordinates: [4, 1]. Strike fast!"
+  },
+  {
+    "id": 158,
+    "textZh": "极智心法第158天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 158: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 159,
+    "textZh": "极智心法第159天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 159: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 160,
+    "textZh": "极智心法第160天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 8 列微微颤动！",
+    "textEn": "Jiao Mantra Day 160: High-intensity seismic indicators registered at cell [3, 8]. Use your ultimate shield!"
+  },
+  {
+    "id": 161,
+    "textZh": "极智心法第161天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 161: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 162,
+    "textZh": "极智心法第162天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 162: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 163,
+    "textZh": "极智心法第163天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 163: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 164,
+    "textZh": "极智心法第164天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 164: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 165,
+    "textZh": "极智心法第165天：朝阳的电动手推车又充好电了，微操坐标：[0, 5]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 165: The Chaoyang cargo pushcart is fully charged at coordinates: [0, 5]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 166,
+    "textZh": "极智心法第166天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 166: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 167,
+    "textZh": "极智心法第167天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 167: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 168,
+    "textZh": "极智心法第168天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 3 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 168: High-intensity seismic indicators registered at cell [0, 3]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 169,
+    "textZh": "极智心法第169天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 169: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 170,
+    "textZh": "极智心法第170天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 170: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 171,
+    "textZh": "极智心法第171天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 171: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 172,
+    "textZh": "极智心法第172天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 172: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 173,
+    "textZh": "极智心法第173天：朝阳的电动手推车又充好电了，微操坐标：[11, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 173: The Chaoyang cargo pushcart is fully charged at coordinates: [11, 9]. Strike fast!"
+  },
+  {
+    "id": 174,
+    "textZh": "极智心法第174天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 174: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 175,
+    "textZh": "极智心法第175天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 175: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 176,
+    "textZh": "极智心法第176天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 7 列微微颤动！",
+    "textEn": "Jiao Mantra Day 176: High-intensity seismic indicators registered at cell [6, 7]. Use your ultimate shield!"
+  },
+  {
+    "id": 177,
+    "textZh": "极智心法第177天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 177: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 178,
+    "textZh": "极智心法第178天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 178: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 179,
+    "textZh": "极智心法第179天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 179: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 180,
+    "textZh": "极智心法第180天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 180: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 181,
+    "textZh": "极智心法第181天：朝阳的电动手推车又充好电了，微操坐标：[7, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 181: The Chaoyang cargo pushcart is fully charged at coordinates: [7, 13]. Strike fast!"
+  },
+  {
+    "id": 182,
+    "textZh": "极智心法第182天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 182: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 183,
+    "textZh": "极智心法第183天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 183: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 184,
+    "textZh": "极智心法第184天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 2 列微微颤动！",
+    "textEn": "Jiao Mantra Day 184: High-intensity seismic indicators registered at cell [3, 2]. Use your ultimate shield!"
+  },
+  {
+    "id": 185,
+    "textZh": "极智心法第185天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 185: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 186,
+    "textZh": "极智心法第186天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 186: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 187,
+    "textZh": "极智心法第187天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 187: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 188,
+    "textZh": "极智心法第188天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 188: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 189,
+    "textZh": "极智心法第189天：朝阳的电动手推车又充好电了，微操坐标：[3, 17]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 189: The Chaoyang cargo pushcart is fully charged at coordinates: [3, 17]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 190,
+    "textZh": "极智心法第190天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 190: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 191,
+    "textZh": "极智心法第191天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 191: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 192,
+    "textZh": "极智心法第192天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 6 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 192: High-intensity seismic indicators registered at cell [0, 6]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 193,
+    "textZh": "极智心法第193天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 193: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 194,
+    "textZh": "极智心法第194天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 194: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 195,
+    "textZh": "极智心法第195天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 195: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 196,
+    "textZh": "极智心法第196天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 196: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 197,
+    "textZh": "极智心法第197天：朝阳的电动手推车又充好电了，微操坐标：[14, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 197: The Chaoyang cargo pushcart is fully charged at coordinates: [14, 1]. Strike fast!"
+  },
+  {
+    "id": 198,
+    "textZh": "极智心法第198天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 198: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 199,
+    "textZh": "极智心法第199天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 199: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 200,
+    "textZh": "极智心法第200天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 1 列微微颤动！",
+    "textEn": "Jiao Mantra Day 200: High-intensity seismic indicators registered at cell [6, 1]. Use your ultimate shield!"
+  },
+  {
+    "id": 201,
+    "textZh": "极智心法第201天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 201: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 202,
+    "textZh": "极智心法第202天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 202: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 203,
+    "textZh": "极智心法第203天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 203: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 204,
+    "textZh": "极智心法第204天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 204: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 205,
+    "textZh": "极智心法第205天：朝阳的电动手推车又充好电了，微操坐标：[10, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 205: The Chaoyang cargo pushcart is fully charged at coordinates: [10, 5]. Strike fast!"
+  },
+  {
+    "id": 206,
+    "textZh": "极智心法第206天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 206: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 207,
+    "textZh": "极智心法第207天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 207: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 208,
+    "textZh": "极智心法第208天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 5 列微微颤动！",
+    "textEn": "Jiao Mantra Day 208: High-intensity seismic indicators registered at cell [3, 5]. Use your ultimate shield!"
+  },
+  {
+    "id": 209,
+    "textZh": "极智心法第209天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 209: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 210,
+    "textZh": "极智心法第210天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 210: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 211,
+    "textZh": "极智心法第211天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 211: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 212,
+    "textZh": "极智心法第212天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 212: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 213,
+    "textZh": "极智心法第213天：朝阳的电动手推车又充好电了，微操坐标：[6, 9]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 213: The Chaoyang cargo pushcart is fully charged at coordinates: [6, 9]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 214,
+    "textZh": "极智心法第214天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 214: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 215,
+    "textZh": "极智心法第215天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 215: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 216,
+    "textZh": "极智心法第216天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 0 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 216: High-intensity seismic indicators registered at cell [0, 0]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 217,
+    "textZh": "极智心法第217天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 217: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 218,
+    "textZh": "极智心法第218天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 218: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 219,
+    "textZh": "极智心法第219天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 219: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 220,
+    "textZh": "极智心法第220天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 220: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 221,
+    "textZh": "极智心法第221天：朝阳的电动手推车又充好电了，微操坐标：[2, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 221: The Chaoyang cargo pushcart is fully charged at coordinates: [2, 13]. Strike fast!"
+  },
+  {
+    "id": 222,
+    "textZh": "极智心法第222天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 222: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 223,
+    "textZh": "极智心法第223天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 223: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 224,
+    "textZh": "极智心法第224天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 4 列微微颤动！",
+    "textEn": "Jiao Mantra Day 224: High-intensity seismic indicators registered at cell [6, 4]. Use your ultimate shield!"
+  },
+  {
+    "id": 225,
+    "textZh": "极智心法第225天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 225: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 226,
+    "textZh": "极智心法第226天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 226: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 227,
+    "textZh": "极智心法第227天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 227: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 228,
+    "textZh": "极智心法第228天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 228: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 229,
+    "textZh": "极智心法第229天：朝阳的电动手推车又充好电了，微操坐标：[13, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 229: The Chaoyang cargo pushcart is fully charged at coordinates: [13, 17]. Strike fast!"
+  },
+  {
+    "id": 230,
+    "textZh": "极智心法第230天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 230: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 231,
+    "textZh": "极智心法第231天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 231: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 232,
+    "textZh": "极智心法第232天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 8 列微微颤动！",
+    "textEn": "Jiao Mantra Day 232: High-intensity seismic indicators registered at cell [3, 8]. Use your ultimate shield!"
+  },
+  {
+    "id": 233,
+    "textZh": "极智心法第233天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 233: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 234,
+    "textZh": "极智心法第234天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 234: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 235,
+    "textZh": "极智心法第235天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 235: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 236,
+    "textZh": "极智心法第236天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 236: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 237,
+    "textZh": "极智心法第237天：朝阳的电动手推车又充好电了，微操坐标：[9, 1]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 237: The Chaoyang cargo pushcart is fully charged at coordinates: [9, 1]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 238,
+    "textZh": "极智心法第238天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 238: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 239,
+    "textZh": "极智心法第239天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 239: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 240,
+    "textZh": "极智心法第240天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 3 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 240: High-intensity seismic indicators registered at cell [0, 3]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 241,
+    "textZh": "极智心法第241天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 241: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 242,
+    "textZh": "极智心法第242天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 242: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 243,
+    "textZh": "极智心法第243天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 243: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 244,
+    "textZh": "极智心法第244天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 244: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 245,
+    "textZh": "极智心法第245天：朝阳的电动手推车又充好电了，微操坐标：[5, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 245: The Chaoyang cargo pushcart is fully charged at coordinates: [5, 5]. Strike fast!"
+  },
+  {
+    "id": 246,
+    "textZh": "极智心法第246天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 246: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 247,
+    "textZh": "极智心法第247天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 247: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 248,
+    "textZh": "极智心法第248天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 7 列微微颤动！",
+    "textEn": "Jiao Mantra Day 248: High-intensity seismic indicators registered at cell [6, 7]. Use your ultimate shield!"
+  },
+  {
+    "id": 249,
+    "textZh": "极智心法第249天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 249: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 250,
+    "textZh": "极智心法第250天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 250: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 251,
+    "textZh": "极智心法第251天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 251: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 252,
+    "textZh": "极智心法第252天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 252: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 253,
+    "textZh": "极智心法第253天：朝阳的电动手推车又充好电了，微操坐标：[1, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 253: The Chaoyang cargo pushcart is fully charged at coordinates: [1, 9]. Strike fast!"
+  },
+  {
+    "id": 254,
+    "textZh": "极智心法第254天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 254: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 255,
+    "textZh": "极智心法第255天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 255: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 256,
+    "textZh": "极智心法第256天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 2 列微微颤动！",
+    "textEn": "Jiao Mantra Day 256: High-intensity seismic indicators registered at cell [3, 2]. Use your ultimate shield!"
+  },
+  {
+    "id": 257,
+    "textZh": "极智心法第257天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 257: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 258,
+    "textZh": "极智心法第258天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 258: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 259,
+    "textZh": "极智心法第259天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 259: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 260,
+    "textZh": "极智心法第260天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 260: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 261,
+    "textZh": "极智心法第261天：朝阳的电动手推车又充好电了，微操坐标：[12, 13]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 261: The Chaoyang cargo pushcart is fully charged at coordinates: [12, 13]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 262,
+    "textZh": "极智心法第262天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 262: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 263,
+    "textZh": "极智心法第263天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 263: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 264,
+    "textZh": "极智心法第264天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 6 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 264: High-intensity seismic indicators registered at cell [0, 6]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 265,
+    "textZh": "极智心法第265天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 265: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 266,
+    "textZh": "极智心法第266天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 266: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 267,
+    "textZh": "极智心法第267天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 267: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 268,
+    "textZh": "极智心法第268天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 268: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 269,
+    "textZh": "极智心法第269天：朝阳的电动手推车又充好电了，微操坐标：[8, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 269: The Chaoyang cargo pushcart is fully charged at coordinates: [8, 17]. Strike fast!"
+  },
+  {
+    "id": 270,
+    "textZh": "极智心法第270天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 270: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 271,
+    "textZh": "极智心法第271天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 271: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 272,
+    "textZh": "极智心法第272天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 1 列微微颤动！",
+    "textEn": "Jiao Mantra Day 272: High-intensity seismic indicators registered at cell [6, 1]. Use your ultimate shield!"
+  },
+  {
+    "id": 273,
+    "textZh": "极智心法第273天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 273: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 274,
+    "textZh": "极智心法第274天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 274: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 275,
+    "textZh": "极智心法第275天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 275: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 276,
+    "textZh": "极智心法第276天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 276: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 277,
+    "textZh": "极智心法第277天：朝阳的电动手推车又充好电了，微操坐标：[4, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 277: The Chaoyang cargo pushcart is fully charged at coordinates: [4, 1]. Strike fast!"
+  },
+  {
+    "id": 278,
+    "textZh": "极智心法第278天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 278: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 279,
+    "textZh": "极智心法第279天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 279: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 280,
+    "textZh": "极智心法第280天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 5 列微微颤动！",
+    "textEn": "Jiao Mantra Day 280: High-intensity seismic indicators registered at cell [3, 5]. Use your ultimate shield!"
+  },
+  {
+    "id": 281,
+    "textZh": "极智心法第281天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 281: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 282,
+    "textZh": "极智心法第282天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 282: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 283,
+    "textZh": "极智心法第283天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 283: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 284,
+    "textZh": "极智心法第284天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 284: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 285,
+    "textZh": "极智心法第285天：朝阳的电动手推车又充好电了，微操坐标：[0, 5]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 285: The Chaoyang cargo pushcart is fully charged at coordinates: [0, 5]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 286,
+    "textZh": "极智心法第286天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 286: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 287,
+    "textZh": "极智心法第287天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 287: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 288,
+    "textZh": "极智心法第288天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 0 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 288: High-intensity seismic indicators registered at cell [0, 0]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 289,
+    "textZh": "极智心法第289天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 289: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 290,
+    "textZh": "极智心法第290天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 290: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 291,
+    "textZh": "极智心法第291天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 291: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 292,
+    "textZh": "极智心法第292天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 292: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 293,
+    "textZh": "极智心法第293天：朝阳的电动手推车又充好电了，微操坐标：[11, 9]。快冲！",
+    "textEn": "Jiao Mantra Day 293: The Chaoyang cargo pushcart is fully charged at coordinates: [11, 9]. Strike fast!"
+  },
+  {
+    "id": 294,
+    "textZh": "极智心法第294天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 294: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 295,
+    "textZh": "极智心法第295天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 295: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 296,
+    "textZh": "极智心法第296天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 4 列微微颤动！",
+    "textEn": "Jiao Mantra Day 296: High-intensity seismic indicators registered at cell [6, 4]. Use your ultimate shield!"
+  },
+  {
+    "id": 297,
+    "textZh": "极智心法第297天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 297: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 298,
+    "textZh": "极智心法第298天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 298: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 299,
+    "textZh": "极智心法第299天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 299: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 300,
+    "textZh": "极智心法第300天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 300: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 301,
+    "textZh": "极智心法第301天：朝阳的电动手推车又充好电了，微操坐标：[7, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 301: The Chaoyang cargo pushcart is fully charged at coordinates: [7, 13]. Strike fast!"
+  },
+  {
+    "id": 302,
+    "textZh": "极智心法第302天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 302: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 303,
+    "textZh": "极智心法第303天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 303: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 304,
+    "textZh": "极智心法第304天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 8 列微微颤动！",
+    "textEn": "Jiao Mantra Day 304: High-intensity seismic indicators registered at cell [3, 8]. Use your ultimate shield!"
+  },
+  {
+    "id": 305,
+    "textZh": "极智心法第305天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 305: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 306,
+    "textZh": "极智心法第306天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 306: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 307,
+    "textZh": "极智心法第307天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 307: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 308,
+    "textZh": "极智心法第308天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 308: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 309,
+    "textZh": "极智心法第309天：朝阳的电动手推车又充好电了，微操坐标：[3, 17]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 309: The Chaoyang cargo pushcart is fully charged at coordinates: [3, 17]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 310,
+    "textZh": "极智心法第310天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 310: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 311,
+    "textZh": "极智心法第311天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 311: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 312,
+    "textZh": "极智心法第312天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 3 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 312: High-intensity seismic indicators registered at cell [0, 3]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 313,
+    "textZh": "极智心法第313天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 313: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 314,
+    "textZh": "极智心法第314天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 314: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 315,
+    "textZh": "极智心法第315天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 315: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 316,
+    "textZh": "极智心法第316天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 316: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 317,
+    "textZh": "极智心法第317天：朝阳的电动手推车又充好电了，微操坐标：[14, 1]。快冲！",
+    "textEn": "Jiao Mantra Day 317: The Chaoyang cargo pushcart is fully charged at coordinates: [14, 1]. Strike fast!"
+  },
+  {
+    "id": 318,
+    "textZh": "极智心法第318天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 318: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 319,
+    "textZh": "极智心法第319天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 319: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 320,
+    "textZh": "极智心法第320天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 7 列微微颤动！",
+    "textEn": "Jiao Mantra Day 320: High-intensity seismic indicators registered at cell [6, 7]. Use your ultimate shield!"
+  },
+  {
+    "id": 321,
+    "textZh": "极智心法第321天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 321: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 322,
+    "textZh": "极智心法第322天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 322: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 323,
+    "textZh": "极智心法第323天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 323: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 324,
+    "textZh": "极智心法第324天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 324: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 325,
+    "textZh": "极智心法第325天：朝阳的电动手推车又充好电了，微操坐标：[10, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 325: The Chaoyang cargo pushcart is fully charged at coordinates: [10, 5]. Strike fast!"
+  },
+  {
+    "id": 326,
+    "textZh": "极智心法第326天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 326: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 327,
+    "textZh": "极智心法第327天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 327: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 328,
+    "textZh": "极智心法第328天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 2 列微微颤动！",
+    "textEn": "Jiao Mantra Day 328: High-intensity seismic indicators registered at cell [3, 2]. Use your ultimate shield!"
+  },
+  {
+    "id": 329,
+    "textZh": "极智心法第329天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 329: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 330,
+    "textZh": "极智心法第330天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 330: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 331,
+    "textZh": "极智心法第331天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 331: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 332,
+    "textZh": "极智心法第332天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 332: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 333,
+    "textZh": "极智心法第333天：朝阳的电动手推车又充好电了，微操坐标：[6, 9]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 333: The Chaoyang cargo pushcart is fully charged at coordinates: [6, 9]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 334,
+    "textZh": "极智心法第334天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 334: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 335,
+    "textZh": "极智心法第335天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 335: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 336,
+    "textZh": "极智心法第336天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 6 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 336: High-intensity seismic indicators registered at cell [0, 6]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 337,
+    "textZh": "极智心法第337天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 337: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 338,
+    "textZh": "极智心法第338天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 338: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 339,
+    "textZh": "极智心法第339天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 339: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 340,
+    "textZh": "极智心法第340天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 340: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 341,
+    "textZh": "极智心法第341天：朝阳的电动手推车又充好电了，微操坐标：[2, 13]。快冲！",
+    "textEn": "Jiao Mantra Day 341: The Chaoyang cargo pushcart is fully charged at coordinates: [2, 13]. Strike fast!"
+  },
+  {
+    "id": 342,
+    "textZh": "极智心法第342天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！ (备忘：华宇学位证自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 342: Under every explosive grid tile lies the absolute 350ms anti-vibration filter. (Log: Huayu PDF Ledger performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 343,
+    "textZh": "极智心法第343天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 343: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 344,
+    "textZh": "极智心法第344天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 6 行 1 列微微颤动！",
+    "textEn": "Jiao Mantra Day 344: High-intensity seismic indicators registered at cell [6, 1]. Use your ultimate shield!"
+  },
+  {
+    "id": 345,
+    "textZh": "极智心法第345天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！ (备忘：朝阳手推车带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 345: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay. (Log: Chaoyang Handcart is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 346,
+    "textZh": "极智心法第346天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 346: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 347,
+    "textZh": "极智心法第347天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 347: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 348,
+    "textZh": "极智心法第348天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！ (备忘：首击绝对屏蔽自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 348: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming! (Log: Immune Shields performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 349,
+    "textZh": "极智心法第349天：朝阳的电动手推车又充好电了，微操坐标：[13, 17]。快冲！",
+    "textEn": "Jiao Mantra Day 349: The Chaoyang cargo pushcart is fully charged at coordinates: [13, 17]. Strike fast!"
+  },
+  {
+    "id": 350,
+    "textZh": "极智心法第350天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 350: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 351,
+    "textZh": "极智心法第351天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。 (备忘：350ms控制键带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 351: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat. (Log: 350ms delay engine is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 352,
+    "textZh": "极智心法第352天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 3 行 5 列微微颤动！",
+    "textEn": "Jiao Mantra Day 352: High-intensity seismic indicators registered at cell [3, 5]. Use your ultimate shield!"
+  },
+  {
+    "id": 353,
+    "textZh": "极智心法第353天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 353: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 354,
+    "textZh": "极智心法第354天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！ (备忘：拓扑电容自动热插拔。本科学位证直接延修！)",
+    "textEn": "Jiao Mantra Day 354: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed. (Log: Topological Capacitor performs hot-plug bypass. \"Delayed graduation alert!\")"
+  },
+  {
+    "id": 355,
+    "textZh": "极智心法第355天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！",
+    "textEn": "Jiao Mantra Day 355: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep!"
+  },
+  {
+    "id": 356,
+    "textZh": "极智心法第356天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 356: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 357,
+    "textZh": "极智心法第357天：朝阳的电动手推车又充好电了，微操坐标：[9, 1]。快冲！ (备忘：袁能量粒子带你冲上巅峰。个袁世杰，真有你的！)",
+    "textEn": "Jiao Mantra Day 357: The Chaoyang cargo pushcart is fully charged at coordinates: [9, 1]. Strike fast! (Log: Yuan Energy Grid is bound for glory. \"Shijie is setting up a cart!\")"
+  },
+  {
+    "id": 358,
+    "textZh": "极智心法第358天：每一个看似普通的雷区，都有椒哥 350ms 防抖的誓死守护！",
+    "textEn": "Jiao Mantra Day 358: Under every explosive grid tile lies the absolute 350ms anti-vibration filter."
+  },
+  {
+    "id": 359,
+    "textZh": "极智心法第359天：莫气馁！点击 [再闹一把]，我的五阶合弦技术会重新为您构筑防爆外壳。",
+    "textEn": "Jiao Mantra Day 359: Down but not defeated! Click [Restart Grid] to rebuild the absolute anti-detonation coat."
+  },
+  {
+    "id": 360,
+    "textZh": "极智心法第360天：如果感觉局势全麻，千万注意：高能“袁子弹”粒子正在 0 行 0 列微微颤动！ (备忘：极智核心自动热插拔。手速决定上限，微操决定命运！)",
+    "textEn": "Jiao Mantra Day 360: High-intensity seismic indicators registered at cell [0, 0]. Use your ultimate shield! (Log: Smart Core performs hot-plug bypass. \"Speed dictates limits, but controls determine fate!\")"
+  },
+  {
+    "id": 361,
+    "textZh": "极智心法第361天：微操决定命运。首击自带抗爆屏蔽，350ms极速避缩屏解锁！",
+    "textEn": "Jiao Mantra Day 361: Micro-control decides destiny! Absolute explosive barrier deployed under a 350ms static delay."
+  },
+  {
+    "id": 362,
+    "textZh": "极智心法第362天：如果声音在这个格子里丢失，别慌，我已为您自动重置苹果 Web Audio 监听器！",
+    "textEn": "Jiao Mantra Day 362: Silenced on standard iOS? No issues, the high-performance audio rescue pipeline has refreshed."
+  },
+  {
+    "id": 363,
+    "textZh": "极智心法第363天：双击标记足够的数字块，直接打出五阶和弦连锁 Cascade！ (备忘：五阶和弦带你冲上巅峰。极速体验，极智护航！)",
+    "textEn": "Jiao Mantra Day 363: Double-click items with complete flag indicators to deploy a pentatonic Cascade sweep! (Log: Pentatonic Cascade is bound for glory. \"Peak efficiency, smart tactical guard!\")"
+  },
+  {
+    "id": 364,
+    "textZh": "极智心法第364天：个袁世杰闹全麻！别墨迹，毕业学位证书正悄然飞越云端！",
+    "textEn": "Jiao Mantra Day 364: Yuan Shijie has completely paralyzed progress! Keep calm, Huayu certificate loadout is streaming!"
+  },
+  {
+    "id": 365,
+    "textZh": "极智心法第365天：朝阳的电动手推车又充好电了，微操坐标：[5, 5]。快冲！",
+    "textEn": "Jiao Mantra Day 365: The Chaoyang cargo pushcart is fully charged at coordinates: [5, 5]. Strike fast!"
+  }
+]
