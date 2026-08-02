@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'scripts/translate_pdf_edge.py.gz.b64'
+      - 'scripts/edge_parts/**'
       - '.github/workflows/build_sscp_chinese_pdf.yml'
   workflow_dispatch:
 
@@ -48,9 +48,12 @@ jobs:
           print('source bytes:', __import__('os').path.getsize('source.pdf'))
           PY
 
-      - name: Decode translation script
+      - name: Reassemble and decode translation script
         run: |
-          base64 -d scripts/translate_pdf_edge.py.gz.b64 | gzip -d > /tmp/translate_pdf_edge.py
+          cat scripts/edge_parts/part* > /tmp/translate_pdf_edge.py.gz.b64
+          echo 'a7777301952431ab0a8d796ed8b9eb8a38f2833231e8ecb8a5c3ad3d21b6577a  /tmp/translate_pdf_edge.py.gz.b64' | sha256sum -c -
+          base64 -d /tmp/translate_pdf_edge.py.gz.b64 | gzip -d > /tmp/translate_pdf_edge.py
+          echo '5b73f33bd0bbf815598ca3e38a0cb7b27e0d0922c67b1ca648f67d2711ac8be9  /tmp/translate_pdf_edge.py' | sha256sum -c -
           python -m py_compile /tmp/translate_pdf_edge.py
 
       - name: Translate selectable text and rebuild PDF
@@ -82,7 +85,6 @@ jobs:
           assert report['pages_with_chinese_text_after'] >= 525, report
           assert report['translation_unit_issue_count'] == 0, report
           print(json.dumps(report, ensure_ascii=False, indent=2))
-          # Render every page at thumbnail resolution to catch malformed page content.
           for page in d:
               _=page.get_pixmap(matrix=fitz.Matrix(0.20,0.20), alpha=False)
           for pn in [0,2,3,14,24,37,94,199,399,556]:
