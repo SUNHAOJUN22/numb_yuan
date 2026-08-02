@@ -1,0 +1,1 @@
+Trigger rebuilt SSCP Chinese PDF after eliminating translation placeholders.
