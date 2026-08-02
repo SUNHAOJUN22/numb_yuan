@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -18,6 +18,7 @@ jobs:
     env:
       REPORT_URL: 'https://oversight.house.gov/wp-content/uploads/2024/12/2024.12.04-SSCP-FINAL-REPORT-ANS.pdf'
       OUTPUT_PDF: '2024.12.04-SSCP-FINAL-REPORT-ANS-中文翻译版-精校排版.pdf'
+      STATUS_PATH: 'tmp/sscp-final-status-v3.json'
     steps:
       - name: Check out translation source branch
         uses: actions/checkout@v4
@@ -57,7 +58,8 @@ jobs:
 
           page_marker='PAGE_RE = re.compile(r"^\\s*Page\\s+(\\d+)\\s+of\\s+(\\d+)\\s*$", re.I)\n'
           if 'PLACEHOLDER_ARTIFACT_RE' not in src:
-              if page_marker not in src: raise SystemExit('PAGE_RE marker missing')
+              if page_marker not in src:
+                  raise SystemExit('PAGE_RE marker missing')
               src=src.replace(page_marker,page_marker+'PLACEHOLDER_ARTIFACT_RE = re.compile(r"(?:Z\\s*X\\s*Q|Q\\s*X\\s*Z)", re.I)\n',1)
 
           start=src.index('def protect_text(')
@@ -80,17 +82,21 @@ def restore_text(text: str, mapping: Dict[str, str]) -> str:
 
           old_save='doc.save(output_pdf, garbage=4, clean=True, deflate=True, deflate_images=True, deflate_fonts=True, use_objstms=1)'
           new_save='doc.save(output_pdf, garbage=3, clean=False, deflate=True, deflate_images=False, deflate_fonts=True, use_objstms=0)'
-          if old_save in src: src=src.replace(old_save,new_save,1)
-          elif new_save not in src: raise SystemExit('save marker missing')
+          if old_save in src:
+              src=src.replace(old_save,new_save,1)
+          elif new_save not in src:
+              raise SystemExit('save marker missing')
 
           if '    placeholder_pages: List[int] = []\n' not in src:
               marker='    long_english: List[dict] = []\n    samples: Dict[str, str] = {}\n'
-              if marker not in src: raise SystemExit('verify vars marker missing')
+              if marker not in src:
+                  raise SystemExit('verify vars marker missing')
               src=src.replace(marker,'    long_english: List[dict] = []\n    placeholder_pages: List[int] = []\n    samples: Dict[str, str] = {}\n',1)
 
           if '            placeholder_pages.append(i + 1)\n' not in src:
               marker='        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if text.strip():\n'
-              if marker not in src: raise SystemExit('verify page marker missing')
+              if marker not in src:
+                  raise SystemExit('verify page marker missing')
               src=src.replace(marker,'        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if PLACEHOLDER_ARTIFACT_RE.search(text):\n            placeholder_pages.append(i + 1)\n        if text.strip():\n',1)
 
           unit_start=src.index('    unit_issues: List[dict] = []\n',src.index('def verify('))
@@ -120,13 +126,16 @@ def restore_text(text: str, mapping: Dict[str, str]) -> str:
 
           report_marker='        "translation_unit_issue_count": len(unit_issues),\n'
           if '        "placeholder_page_count": len(placeholder_pages),\n' not in src:
-              if report_marker not in src: raise SystemExit('report marker missing')
+              if report_marker not in src:
+                  raise SystemExit('report marker missing')
               src=src.replace(report_marker,report_marker+'        "placeholder_page_count": len(placeholder_pages),\n',1)
 
           old_final='    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units contain no Chinese characters")\n'
           new_final='    if placeholder_pages:\n        raise RuntimeError(f"placeholder artifacts remain on {len(placeholder_pages)} pages")\n    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units failed quality checks")\n'
-          if old_final in src: src=src.replace(old_final,new_final,1)
-          elif new_final not in src: raise SystemExit('final verify marker missing')
+          if old_final in src:
+              src=src.replace(old_final,new_final,1)
+          elif new_final not in src:
+              raise SystemExit('final verify marker missing')
 
           path.write_text(src,'utf-8')
           PY
@@ -184,3 +193,27 @@ def restore_text(text: str, mapping: Dict[str, str]) -> str:
           retention-days: 30
           compression-level: 0
           if-no-files-found: warn
+
+      - name: Publish terminal status
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CONCLUSION: ${{ job.status }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          payload = {
+              "conclusion": os.environ["CONCLUSION"],
+              "run_id": int(os.environ["GITHUB_RUN_ID"]),
+              "run_attempt": int(os.environ["GITHUB_RUN_ATTEMPT"]),
+              "sha": os.environ["GITHUB_SHA"],
+              "artifact_name": "SSCP-Chinese-Translated-PDF-Corrected",
+          }
+          Path('/tmp/sscp-status.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2), 'utf-8')
+          PY
+          content=$(base64 -w0 /tmp/sscp-status.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${STATUS_PATH}" \
+            -f message='Record terminal status for SSCP Chinese PDF build' \
+            -f content="$content" \
+            -f branch='main'
