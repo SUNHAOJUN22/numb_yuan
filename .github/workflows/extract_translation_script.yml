@@ -1,0 +1,34 @@
+name: Extract translation script
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract_translation_script.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - name: Reconstruct source
+        run: |
+          cat scripts/edge_parts_fixed/part00a scripts/edge_parts_fixed/part00b scripts/edge_parts/part01 scripts/edge_parts/part02 scripts/edge_parts/part03 scripts/edge_parts/part04 | tr -d '\r\n\t ' > /tmp/translate_pdf_edge.py.gz.b64
+          echo 'a7777301952431ab0a8d796ed8b9eb8a38f2833231e8ecb8a5c3ad3d21b6577a  /tmp/translate_pdf_edge.py.gz.b64' | sha256sum -c -
+          base64 -d /tmp/translate_pdf_edge.py.gz.b64 | gzip -d > scripts/translate_pdf_edge.py
+          echo '5b73f33bd0bbf815598ca3e38a0cb7b27e0d0922c67b1ca648f67d2711ac8be9  scripts/translate_pdf_edge.py' | sha256sum -c -
+          python -m py_compile scripts/translate_pdf_edge.py
+      - name: Commit plain script
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/translate_pdf_edge.py
+          git commit -m 'Expose plain PDF translation script for repair' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
