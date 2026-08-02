@@ -1,0 +1,159 @@
+name: Repair SSCP translation script
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/repair_translation_script.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Patch placeholder handling and verification
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/translate_pdf_edge.py')
+          src = path.read_text('utf-8')
+
+          marker = 'PAGE_RE = re.compile(r"^\\s*Page\\s+(\\d+)\\s+of\\s+(\\d+)\\s*$", re.I)\n'
+          addition = marker + 'PLACEHOLDER_ARTIFACT_RE = re.compile(r"(?:Z\\s*X\\s*Q|Q\\s*X\\s*Z)", re.I)\n'
+          if 'PLACEHOLDER_ARTIFACT_RE' not in src:
+              if marker not in src:
+                  raise SystemExit('PAGE_RE insertion marker not found')
+              src = src.replace(marker, addition, 1)
+
+          start = src.index('def protect_text(')
+          end = src.index('\ndef postprocess_zh', start)
+          replacement = r'''def protect_text(text: str) -> Tuple[str, Dict[str, str]]:
+              """Apply reviewed Chinese terminology directly, without translation placeholders.
+
+              The previous alphanumeric placeholders were occasionally altered by the translation
+              service and leaked into the final PDF. Existing Chinese spans are preserved by the
+              English-to-Chinese engine, so glossary targets are inserted directly instead.
+              """
+              for source, target in GLOSSARY:
+                  pattern = re.compile(re.escape(source), re.I)
+                  text = pattern.sub(lambda _m, t=target: t, text)
+              return text, {}
+
+
+          def restore_text(text: str, mapping: Dict[str, str]) -> str:
+              # Compatibility fallback for old caches. New translations use no placeholders.
+              for token, value in mapping.items():
+                  loose = r"\s*".join(map(re.escape, token))
+                  text = re.sub(loose, lambda _m, v=value: v, text, flags=re.I)
+              return text
+
+          '''
+          replacement = '\n'.join(line[10:] if line.startswith('          ') else line for line in replacement.splitlines())
+          src = src[:start] + replacement + src[end+1:]
+
+          old_save = 'doc.save(output_pdf, garbage=4, clean=True, deflate=True, deflate_images=True, deflate_fonts=True, use_objstms=1)'
+          new_save = 'doc.save(output_pdf, garbage=3, clean=False, deflate=True, deflate_images=False, deflate_fonts=True, use_objstms=0)'
+          if old_save not in src and new_save not in src:
+              raise SystemExit('doc.save marker not found')
+          src = src.replace(old_save, new_save, 1)
+
+          old = '''    long_english: List[dict] = []
+              samples: Dict[str, str] = {}
+          '''
+          old = '\n'.join(line[4:] if line.startswith('    ') else line for line in old.splitlines()) + '\n'
+          new = '''    long_english: List[dict] = []
+              placeholder_pages: List[int] = []
+              samples: Dict[str, str] = {}
+          '''
+          new = '\n'.join(line[4:] if line.startswith('    ') else line for line in new.splitlines()) + '\n'
+          if old not in src:
+              raise SystemExit('verify variable marker not found')
+          src = src.replace(old, new, 1)
+
+          old = '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if text.strip():\n'
+          new = '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if PLACEHOLDER_ARTIFACT_RE.search(text):\n            placeholder_pages.append(i + 1)\n        if text.strip():\n'
+          if old not in src:
+              raise SystemExit('page verification marker not found')
+          src = src.replace(old, new, 1)
+
+          unit_start = src.index('    unit_issues: List[dict] = []\n', src.index('def verify('))
+          unit_end = src.index('    report = {\n', unit_start)
+          unit_replacement = r'''    unit_issues: List[dict] = []
+              for source, translated in translations.items():
+                  if PLACEHOLDER_ARTIFACT_RE.search(translated):
+                      unit_issues.append({"source": source, "translation": translated, "reason": "placeholder artifact"})
+                      continue
+                  # URLs, e-mail addresses, DOI strings and acronym-only fragments may legitimately
+                  # contain no Chinese. Evaluate the remaining prose after removing those literals.
+                  residual = URL_RE.sub("", source)
+                  residual = EMAIL_RE.sub("", residual)
+                  residual = DOI_RE.sub("", residual)
+                  residual = ACRONYM_RE.sub("", residual)
+                  letters = len(re.findall(r"[A-Za-z]", residual))
+                  if letters >= 18 and not CJK_RE.search(translated):
+                      unit_issues.append({"source": source, "translation": translated, "reason": "no Chinese characters"})
+              quality = {
+                  "unit_issue_count": len(unit_issues),
+                  "unit_issues": unit_issues[:500],
+                  "placeholder_page_count": len(placeholder_pages),
+                  "placeholder_pages": placeholder_pages[:500],
+                  "pages_with_long_english_sequences": long_english,
+              }
+              quality_path.write_text(json.dumps(quality, ensure_ascii=False, indent=2), "utf-8")
+
+          '''
+          unit_replacement = '\n'.join(line[4:] if line.startswith('    ') else line for line in unit_replacement.splitlines())
+          src = src[:unit_start] + unit_replacement + src[unit_end:]
+
+          report_marker = '        "translation_unit_issue_count": len(unit_issues),\n'
+          report_add = report_marker + '        "placeholder_page_count": len(placeholder_pages),\n'
+          if '"placeholder_page_count": len(placeholder_pages)' not in src:
+              if report_marker not in src:
+                  raise SystemExit('report marker not found')
+              src = src.replace(report_marker, report_add, 1)
+
+          final_marker = '    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units contain no Chinese characters")\n'
+          final_new = '    if placeholder_pages:\n        raise RuntimeError(f"placeholder artifacts remain on {len(placeholder_pages)} pages")\n    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units failed quality checks")\n'
+          if final_marker not in src:
+              raise SystemExit('final verification marker not found')
+          src = src.replace(final_marker, final_new, 1)
+
+          path.write_text(src, 'utf-8')
+
+          wf_path = Path('.github/workflows/build_sscp_chinese_pdf.yml')
+          wf = wf_path.read_text('utf-8')
+          if "      - 'scripts/translate_pdf_edge.py'" not in wf:
+              wf = wf.replace("      - 'scripts/edge_parts/**'\n", "      - 'scripts/edge_parts/**'\n      - 'scripts/translate_pdf_edge.py'\n", 1)
+          w_start = wf.index('      - name: Reassemble and decode translation script')
+          w_end = wf.index('      - name: Translate selectable text and rebuild PDF', w_start)
+          wf_step = '''      - name: Validate translation script
+                  run: |
+                    python -m py_compile scripts/translate_pdf_edge.py
+                    cp scripts/translate_pdf_edge.py /tmp/translate_pdf_edge.py
+
+              '''
+          wf_step = '\n'.join(line[6:] if line.startswith('      ') else line for line in wf_step.splitlines())
+          wf = wf[:w_start] + wf_step + wf[w_end:]
+          wf_path.write_text(wf, 'utf-8')
+          PY
+
+          python -m py_compile scripts/translate_pdf_edge.py
+          grep -n 'PLACEHOLDER_ARTIFACT_RE\|def protect_text\|placeholder_page_count\|doc.save' scripts/translate_pdf_edge.py
+          grep -n 'Validate translation script\|scripts/translate_pdf_edge.py' .github/workflows/build_sscp_chinese_pdf.yml
+
+      - name: Commit repair
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/translate_pdf_edge.py .github/workflows/build_sscp_chinese_pdf.yml
+          git commit -m 'Eliminate translation placeholder artifacts and harden verification' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
