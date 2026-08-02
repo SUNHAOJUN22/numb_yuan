@@ -1,0 +1,255 @@
+name: Build SSCP Chinese translated PDF
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/edge_parts/**'
+      - 'scripts/edge_parts_fixed/**'
+      - '.github/workflows/build_sscp_chinese_pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      REPORT_URL: 'https://oversight.house.gov/wp-content/uploads/2024/12/2024.12.04-SSCP-FINAL-REPORT-ANS.pdf'
+      OUTPUT_PDF: '2024.12.04-SSCP-FINAL-REPORT-ANS-中文翻译版-精校排版.pdf'
+    steps:
+      - name: Check out build branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk poppler-utils qpdf
+          fc-cache -f
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir pymupdf==1.26.7 requests
+
+      - name: Download and validate source report
+        run: |
+          curl -L --fail --retry 6 --retry-delay 5 "$REPORT_URL" -o source.pdf
+          python - <<'PY'
+          import fitz
+          import os
+          d = fitz.open('source.pdf')
+          assert len(d) == 557, len(d)
+          print('source pages:', len(d))
+          print('source bytes:', os.path.getsize('source.pdf'))
+          d.close()
+          PY
+
+      - name: Reassemble and harden translation script
+        run: |
+          cat scripts/edge_parts_fixed/part00a scripts/edge_parts_fixed/part00b scripts/edge_parts/part01 scripts/edge_parts/part02 scripts/edge_parts/part03 scripts/edge_parts/part04 | tr -d '\r\n\t ' > /tmp/translate_pdf_edge.py.gz.b64
+          echo 'a7777301952431ab0a8d796ed8b9eb8a38f2833231e8ecb8a5c3ad3d21b6577a  /tmp/translate_pdf_edge.py.gz.b64' | sha256sum -c -
+          base64 -d /tmp/translate_pdf_edge.py.gz.b64 | gzip -d > /tmp/translate_pdf_edge.py
+          echo '5b73f33bd0bbf815598ca3e38a0cb7b27e0d0922c67b1ca648f67d2711ac8be9  /tmp/translate_pdf_edge.py' | sha256sum -c -
+
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('/tmp/translate_pdf_edge.py')
+          src = path.read_text('utf-8')
+
+          page_marker = 'PAGE_RE = re.compile(r"^\\s*Page\\s+(\\d+)\\s+of\\s+(\\d+)\\s*$", re.I)\n'
+          if 'PLACEHOLDER_ARTIFACT_RE' not in src:
+              if page_marker not in src:
+                  raise SystemExit('PAGE_RE insertion marker not found')
+              src = src.replace(
+                  page_marker,
+                  page_marker + 'PLACEHOLDER_ARTIFACT_RE = re.compile(r"(?:Z\\s*X\\s*Q|Q\\s*X\\s*Z)", re.I)\n',
+                  1,
+              )
+
+          start = src.index('def protect_text(')
+          end = src.index('\ndef postprocess_zh', start)
+          new_protection = '''def protect_text(text: str) -> Tuple[str, Dict[str, str]]:
+    """Insert reviewed Chinese terminology directly and avoid fragile placeholders."""
+    for source, target in GLOSSARY:
+        pattern = re.compile(re.escape(source), re.I)
+        text = pattern.sub(lambda _m, t=target: t, text)
+    return text, {}
+
+
+def restore_text(text: str, mapping: Dict[str, str]) -> str:
+    # Compatibility fallback only; new runs intentionally create no placeholders.
+    for token, value in mapping.items():
+        loose = r"\\s*".join(map(re.escape, token))
+        text = re.sub(loose, lambda _m, v=value: v, text, flags=re.I)
+    return text
+
+'''
+          src = src[:start] + new_protection + src[end + 1:]
+
+          old_save = 'doc.save(output_pdf, garbage=4, clean=True, deflate=True, deflate_images=True, deflate_fonts=True, use_objstms=1)'
+          new_save = 'doc.save(output_pdf, garbage=3, clean=False, deflate=True, deflate_images=False, deflate_fonts=True, use_objstms=0)'
+          if old_save in src:
+              src = src.replace(old_save, new_save, 1)
+          elif new_save not in src:
+              raise SystemExit('doc.save marker not found')
+
+          if '    placeholder_pages: List[int] = []\n' not in src:
+              marker = '    long_english: List[dict] = []\n    samples: Dict[str, str] = {}\n'
+              if marker not in src:
+                  raise SystemExit('verify variable marker not found')
+              src = src.replace(
+                  marker,
+                  '    long_english: List[dict] = []\n    placeholder_pages: List[int] = []\n    samples: Dict[str, str] = {}\n',
+                  1,
+              )
+
+          if '            placeholder_pages.append(i + 1)\n' not in src:
+              marker = '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if text.strip():\n'
+              if marker not in src:
+                  raise SystemExit('page verification marker not found')
+              src = src.replace(
+                  marker,
+                  '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if PLACEHOLDER_ARTIFACT_RE.search(text):\n            placeholder_pages.append(i + 1)\n        if text.strip():\n',
+                  1,
+              )
+
+          unit_start = src.index('    unit_issues: List[dict] = []\n', src.index('def verify('))
+          unit_end = src.index('    report = {\n', unit_start)
+          new_quality = '''    unit_issues: List[dict] = []
+    for source, translated in translations.items():
+        if PLACEHOLDER_ARTIFACT_RE.search(translated):
+            unit_issues.append({"source": source, "translation": translated, "reason": "placeholder artifact"})
+            continue
+        # Pure URLs, e-mail addresses, DOI strings, acronyms and numbers can legitimately
+        # contain no Chinese. Test only the remaining English prose.
+        residual = URL_RE.sub("", source)
+        residual = EMAIL_RE.sub("", residual)
+        residual = DOI_RE.sub("", residual)
+        residual = ACRONYM_RE.sub("", residual)
+        letters = len(re.findall(r"[A-Za-z]", residual))
+        if letters >= 18 and not CJK_RE.search(translated):
+            unit_issues.append({"source": source, "translation": translated, "reason": "no Chinese characters"})
+    quality = {
+        "unit_issue_count": len(unit_issues),
+        "unit_issues": unit_issues[:500],
+        "placeholder_page_count": len(placeholder_pages),
+        "placeholder_pages": placeholder_pages[:500],
+        "pages_with_long_english_sequences": long_english,
+    }
+    quality_path.write_text(json.dumps(quality, ensure_ascii=False, indent=2), "utf-8")
+
+'''
+          src = src[:unit_start] + new_quality + src[unit_end:]
+
+          report_marker = '        "translation_unit_issue_count": len(unit_issues),\n'
+          if '        "placeholder_page_count": len(placeholder_pages),\n' not in src:
+              if report_marker not in src:
+                  raise SystemExit('report marker not found')
+              src = src.replace(
+                  report_marker,
+                  report_marker + '        "placeholder_page_count": len(placeholder_pages),\n',
+                  1,
+              )
+
+          old_final = '    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units contain no Chinese characters")\n'
+          new_final = '    if placeholder_pages:\n        raise RuntimeError(f"placeholder artifacts remain on {len(placeholder_pages)} pages")\n    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units failed quality checks")\n'
+          if old_final in src:
+              src = src.replace(old_final, new_final, 1)
+          elif new_final not in src:
+              raise SystemExit('final verification marker not found')
+
+          path.write_text(src, 'utf-8')
+          PY
+
+          python -m py_compile /tmp/translate_pdf_edge.py
+          grep -n 'PLACEHOLDER_ARTIFACT_RE\|avoid fragile placeholders\|placeholder_page_count\|doc.save' /tmp/translate_pdf_edge.py
+
+      - name: Translate selectable text and rebuild PDF
+        run: |
+          rm -rf translation_work "$OUTPUT_PDF"
+          REGULAR_FONT=$(fc-match -f '%{file}\n' 'Noto Sans CJK SC:style=Regular' | head -1)
+          BOLD_FONT=$(fc-match -f '%{file}\n' 'Noto Sans CJK SC:style=Bold' | head -1)
+          echo "regular font: $REGULAR_FONT"
+          echo "bold font: $BOLD_FONT"
+          test -f "$REGULAR_FONT"
+          test -f "$BOLD_FONT"
+          python /tmp/translate_pdf_edge.py \
+            --input source.pdf \
+            --output "$OUTPUT_PDF" \
+            --font "$REGULAR_FONT" \
+            --bold-font "$BOLD_FONT" \
+            --work-dir translation_work
+
+      - name: Structural verification and sample rendering
+        run: |
+          python - <<'PY'
+          import fitz, json, os, re
+          from pathlib import Path
+
+          out = Path(os.environ['OUTPUT_PDF'])
+          d = fitz.open(out)
+          assert len(d) == 557, len(d)
+          report = json.loads(Path('translation_work/verification.json').read_text('utf-8'))
+          assert report['page_count_match'], report
+          assert report['image_object_counts_match'], report
+          assert report['pages_with_chinese_text_after'] >= 525, report
+          assert report['translation_unit_issue_count'] == 0, report
+          assert report['placeholder_page_count'] == 0, report
+          assert report['layout_issue_count'] == 0, report
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+
+          placeholder = re.compile(r'(?:Z\s*X\s*Q|Q\s*X\s*Z)', re.I)
+          for page in d:
+              text = page.get_text('text')
+              assert not placeholder.search(text), page.number + 1
+              _ = page.get_pixmap(matrix=fitz.Matrix(0.20, 0.20), alpha=False)
+
+          for pn in [0, 2, 3, 14, 24, 37, 94, 199, 399, 424, 496, 556]:
+              pix = d[pn].get_pixmap(matrix=fitz.Matrix(1.6, 1.6), alpha=False)
+              pix.save(f'translation_work/check-page-{pn + 1}.png')
+          d.close()
+          PY
+          qpdf --check "$OUTPUT_PDF"
+          pdfinfo "$OUTPUT_PDF" | head -40
+
+      - name: Optimize if required
+        run: |
+          size=$(stat -c%s "$OUTPUT_PDF")
+          if [ "$size" -gt 92000000 ]; then
+            qpdf --object-streams=generate --stream-data=compress "$OUTPUT_PDF" optimized.pdf
+            mv optimized.pdf "$OUTPUT_PDF"
+          fi
+          test $(stat -c%s "$OUTPUT_PDF") -lt 100000000
+          qpdf --check "$OUTPUT_PDF"
+
+      - name: Upload final PDF and verification package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SSCP-Chinese-Translated-PDF-Final
+          path: |
+            ${{ env.OUTPUT_PDF }}
+            translation_work/verification.json
+            translation_work/layout_issues.json
+            translation_work/translation_quality.json
+            translation_work/check-page-*.png
+          retention-days: 30
+          compression-level: 0
+          if-no-files-found: warn
+
+      - name: Commit completed output to build branch
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$OUTPUT_PDF" translation_work/verification.json translation_work/layout_issues.json translation_work/translation_quality.json
+          git commit -m 'Add completed Chinese translation of SSCP report' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref || github.ref_name }}
