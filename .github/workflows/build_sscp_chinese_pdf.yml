@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/edge_parts/**'
+      - 'scripts/edge_parts_fixed/**'
       - '.github/workflows/build_sscp_chinese_pdf.yml'
   workflow_dispatch:
 
@@ -50,9 +51,9 @@ jobs:
 
       - name: Reassemble and decode translation script
         run: |
-          cat scripts/edge_parts/part* | tr -d '\r\n\t ' > /tmp/translate_pdf_edge.py.gz.b64
-          wc -c scripts/edge_parts/part* /tmp/translate_pdf_edge.py.gz.b64
-          sha256sum scripts/edge_parts/part* /tmp/translate_pdf_edge.py.gz.b64
+          cat scripts/edge_parts_fixed/part00a scripts/edge_parts_fixed/part00b scripts/edge_parts/part01 scripts/edge_parts/part02 scripts/edge_parts/part03 scripts/edge_parts/part04 | tr -d '\r\n\t ' > /tmp/translate_pdf_edge.py.gz.b64
+          wc -c scripts/edge_parts_fixed/part00a scripts/edge_parts_fixed/part00b scripts/edge_parts/part01 scripts/edge_parts/part02 scripts/edge_parts/part03 scripts/edge_parts/part04 /tmp/translate_pdf_edge.py.gz.b64
+          sha256sum /tmp/translate_pdf_edge.py.gz.b64
           echo 'a7777301952431ab0a8d796ed8b9eb8a38f2833231e8ecb8a5c3ad3d21b6577a  /tmp/translate_pdf_edge.py.gz.b64' | sha256sum -c -
           base64 -d /tmp/translate_pdf_edge.py.gz.b64 | gzip -d > /tmp/translate_pdf_edge.py
           echo '5b73f33bd0bbf815598ca3e38a0cb7b27e0d0922c67b1ca648f67d2711ac8be9  /tmp/translate_pdf_edge.py' | sha256sum -c -
