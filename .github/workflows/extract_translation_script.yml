@@ -1,0 +1,143 @@
+name: Repair and expose translation script
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract_translation_script.yml'
+      - 'scripts/translate_pdf_edge.py'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Patch translation script and build workflow
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/translate_pdf_edge.py')
+          src = path.read_text('utf-8')
+
+          page_marker = 'PAGE_RE = re.compile(r"^\\s*Page\\s+(\\d+)\\s+of\\s+(\\d+)\\s*$", re.I)\n'
+          if 'PLACEHOLDER_ARTIFACT_RE' not in src:
+              assert page_marker in src
+              src = src.replace(page_marker, page_marker + 'PLACEHOLDER_ARTIFACT_RE = re.compile(r"(?:Z\\s*X\\s*Q|Q\\s*X\\s*Z)", re.I)\n', 1)
+
+          if 'avoid fragile placeholders' not in src:
+              start = src.index('def protect_text(')
+              end = src.index('\ndef postprocess_zh', start)
+              src = src[:start] + '''def protect_text(text: str) -> Tuple[str, Dict[str, str]]:
+    """Insert reviewed Chinese terms directly and avoid fragile placeholders."""
+    for source, target in GLOSSARY:
+        pattern = re.compile(re.escape(source), re.I)
+        text = pattern.sub(lambda _m, t=target: t, text)
+    return text, {}
+
+
+def restore_text(text: str, mapping: Dict[str, str]) -> str:
+    for token, value in mapping.items():
+        loose = r"\\s*".join(map(re.escape, token))
+        text = re.sub(loose, lambda _m, v=value: v, text, flags=re.I)
+    return text
+
+''' + src[end + 1:]
+
+          src = src.replace(
+              'doc.save(output_pdf, garbage=4, clean=True, deflate=True, deflate_images=True, deflate_fonts=True, use_objstms=1)',
+              'doc.save(output_pdf, garbage=3, clean=False, deflate=True, deflate_images=False, deflate_fonts=True, use_objstms=0)',
+              1,
+          )
+
+          if '    placeholder_pages: List[int] = []\n' not in src:
+              src = src.replace(
+                  '    long_english: List[dict] = []\n    samples: Dict[str, str] = {}\n',
+                  '    long_english: List[dict] = []\n    placeholder_pages: List[int] = []\n    samples: Dict[str, str] = {}\n',
+                  1,
+              )
+
+          if '            placeholder_pages.append(i + 1)\n' not in src:
+              src = src.replace(
+                  '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if text.strip():\n',
+                  '        text = unicodedata.normalize("NFKC", page.get_text("text"))\n        if PLACEHOLDER_ARTIFACT_RE.search(text):\n            placeholder_pages.append(i + 1)\n        if text.strip():\n',
+                  1,
+              )
+
+          unit_start = src.index('    unit_issues: List[dict] = []\n', src.index('def verify('))
+          unit_end = src.index('    report = {\n', unit_start)
+          if '"placeholder_page_count": len(placeholder_pages)' not in src[unit_start:unit_end]:
+              src = src[:unit_start] + '''    unit_issues: List[dict] = []
+    for source, translated in translations.items():
+        if PLACEHOLDER_ARTIFACT_RE.search(translated):
+            unit_issues.append({"source": source, "translation": translated, "reason": "placeholder artifact"})
+            continue
+        residual = URL_RE.sub("", source)
+        residual = EMAIL_RE.sub("", residual)
+        residual = DOI_RE.sub("", residual)
+        residual = ACRONYM_RE.sub("", residual)
+        letters = len(re.findall(r"[A-Za-z]", residual))
+        if letters >= 18 and not CJK_RE.search(translated):
+            unit_issues.append({"source": source, "translation": translated, "reason": "no Chinese characters"})
+    quality = {
+        "unit_issue_count": len(unit_issues),
+        "unit_issues": unit_issues[:500],
+        "placeholder_page_count": len(placeholder_pages),
+        "placeholder_pages": placeholder_pages[:500],
+        "pages_with_long_english_sequences": long_english,
+    }
+    quality_path.write_text(json.dumps(quality, ensure_ascii=False, indent=2), "utf-8")
+
+''' + src[unit_end:]
+
+          if '        "placeholder_page_count": len(placeholder_pages),\n' not in src:
+              src = src.replace(
+                  '        "translation_unit_issue_count": len(unit_issues),\n',
+                  '        "translation_unit_issue_count": len(unit_issues),\n        "placeholder_page_count": len(placeholder_pages),\n',
+                  1,
+              )
+
+          if 'placeholder artifacts remain on' not in src:
+              src = src.replace(
+                  '    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units contain no Chinese characters")\n',
+                  '    if placeholder_pages:\n        raise RuntimeError(f"placeholder artifacts remain on {len(placeholder_pages)} pages")\n    if len(unit_issues) > 0:\n        raise RuntimeError(f"{len(unit_issues)} translated units failed quality checks")\n',
+                  1,
+              )
+
+          path.write_text(src, 'utf-8')
+
+          wf_path = Path('.github/workflows/build_sscp_chinese_pdf.yml')
+          wf = wf_path.read_text('utf-8')
+          if "      - 'scripts/translate_pdf_edge.py'" not in wf:
+              wf = wf.replace("      - 'scripts/edge_parts/**'\n", "      - 'scripts/edge_parts/**'\n      - 'scripts/translate_pdf_edge.py'\n", 1)
+          if '      - name: Reassemble and decode translation script' in wf:
+              w_start = wf.index('      - name: Reassemble and decode translation script')
+              w_end = wf.index('      - name: Translate selectable text and rebuild PDF', w_start)
+              wf = wf[:w_start] + '''      - name: Validate translation script
+        run: |
+          python -m py_compile scripts/translate_pdf_edge.py
+          cp scripts/translate_pdf_edge.py /tmp/translate_pdf_edge.py
+
+''' + wf[w_end:]
+          wf_path.write_text(wf, 'utf-8')
+          PY
+
+          python -m py_compile scripts/translate_pdf_edge.py
+          grep -n 'PLACEHOLDER_ARTIFACT_RE\|avoid fragile placeholders\|placeholder_page_count\|doc.save' scripts/translate_pdf_edge.py
+          grep -n 'Validate translation script\|scripts/translate_pdf_edge.py' .github/workflows/build_sscp_chinese_pdf.yml
+
+      - name: Commit repaired files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/translate_pdf_edge.py .github/workflows/build_sscp_chinese_pdf.yml
+          git commit -m 'Eliminate translation placeholders and harden verification' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
