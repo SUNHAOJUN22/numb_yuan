@@ -1,0 +1,55 @@
+name: Test Edge English Chinese translation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/test_edge_translation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: Install
+        run: python -m pip install --upgrade requests
+      - name: Translate samples with Microsoft Edge Translator
+        run: |
+          python - <<'PY'
+          import json, requests, unicodedata
+          samples=[
+          'AFTER ACTION REVIEW OF THE COVID-19 PANDEMIC: The Lessons Learned and a Path Forward Final Report of the Select Subcommittee on the Coronavirus Pandemic Committee on Oversight and Accountability U.S. House of Representatives December 4, 2024',
+          'Wuhan Institute of Virology [hereinafter “WIV”] Office of Director of National Intelligence [hereinafter “ODNI”] U.S. Department of Energy [hereinafter “DOE”] Federal Bureau of Investigation [hereinafter “FBI”]',
+          'Four years after the onset of the worst pandemic in 100 years, the weight of the evidence increasingly supports the lab leak hypothesis. Since the Select Subcommittee commenced its work in February 2023, more and more senior intelligence officials, politicians, science editors, and scientists increasingly have endorsed the hypothesis that COVID-19 emerged as the result of a laboratory or research related accident.',
+          'EcoHealth Alliance, Inc. Facilitated Gain-of-Function Research at the Wuhan Institute of Virology.',
+          'The Executive Chamber withheld documents and communications involving nursing home data.'
+          ]
+          auth=requests.get('https://edge.microsoft.com/translate/auth',timeout=30)
+          auth.raise_for_status()
+          token=auth.text.strip()
+          url='https://api-edge.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=zh-Hans'
+          headers={'Authorization':f'Bearer {token}','Content-Type':'application/json','User-Agent':'Mozilla/5.0'}
+          resp=requests.post(url,headers=headers,json=[{'Text':s} for s in samples],timeout=60)
+          resp.raise_for_status()
+          data=resp.json()
+          out=[]
+          for src,item in zip(samples,data):
+              text=unicodedata.normalize('NFKC',item['translations'][0]['text']).strip()
+              out.append({'source':src,'translation':text})
+          open('edge_translation_test.json','w',encoding='utf-8').write(json.dumps(out,ensure_ascii=False,indent=2))
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add edge_translation_test.json
+          git commit -m 'Add Edge translation sample result' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}

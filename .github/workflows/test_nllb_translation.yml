@@ -1,0 +1,63 @@
+name: Test NLLB English Chinese translation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/test_nllb_translation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HF_HUB_DISABLE_XET: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ctranslate2 sentencepiece huggingface_hub
+      - name: Translate samples with NLLB INT8
+        run: |
+          python - <<'PY'
+          import json, unicodedata
+          import ctranslate2
+          import sentencepiece as spm
+          from huggingface_hub import snapshot_download
+          repo='mijuanlo/nllb-200-distilled-600M-ct2-int8'
+          model_dir=snapshot_download(repo_id=repo, allow_patterns=['model.bin','sentencepiece.bpe.model','shared_vocabulary.json','shared_vocabulary.txt','config.json'])
+          sp=spm.SentencePieceProcessor(model_file=model_dir+'/sentencepiece.bpe.model')
+          tr=ctranslate2.Translator(model_dir, device='cpu', compute_type='int8', inter_threads=2, intra_threads=2)
+          samples=[
+          'AFTER ACTION REVIEW OF THE COVID-19 PANDEMIC: The Lessons Learned and a Path Forward Final Report of the Select Subcommittee on the Coronavirus Pandemic Committee on Oversight and Accountability U.S. House of Representatives December 4, 2024',
+          'Wuhan Institute of Virology [hereinafter “WIV”] Office of Director of National Intelligence [hereinafter “ODNI”] U.S. Department of Energy [hereinafter “DOE”] Federal Bureau of Investigation [hereinafter “FBI”]',
+          'Four years after the onset of the worst pandemic in 100 years, the weight of the evidence increasingly supports the lab leak hypothesis. Since the Select Subcommittee commenced its work in February 2023, more and more senior intelligence officials, politicians, science editors, and scientists increasingly have endorsed the hypothesis that COVID-19 emerged as the result of a laboratory or research related accident.',
+          'EcoHealth Alliance, Inc. Facilitated Gain-of-Function Research at the Wuhan Institute of Virology.',
+          'The Executive Chamber withheld documents and communications involving nursing home data.'
+          ]
+          source=[["eng_Latn"]+sp.encode_as_pieces(s)+["</s>"] for s in samples]
+          res=tr.translate_batch(source,target_prefix=[["zho_Hans"]]*len(source),beam_size=4,max_decoding_length=512,batch_type='tokens',max_batch_size=1024)
+          out=[]
+          for s,r in zip(samples,res):
+            toks=r.hypotheses[0]
+            if toks and toks[0]=='zho_Hans': toks=toks[1:]
+            text=unicodedata.normalize('NFKC',sp.decode(toks)).strip()
+            out.append({'source':s,'translation':text})
+          open('nllb_translation_test.json','w',encoding='utf-8').write(json.dumps(out,ensure_ascii=False,indent=2))
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add nllb_translation_test.json
+          git commit -m 'Add NLLB translation sample result' || exit 0
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
